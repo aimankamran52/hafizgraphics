@@ -1,0 +1,174 @@
+import SectionTitle from '../components/SectionTitle';
+import { categories, products } from '../data/products';
+import { Link } from 'react-router-dom';
+import {
+  Download,
+  FileText,
+  Eye,
+  ChevronRight,
+  Printer,
+  Palette,
+  Package,
+  Tag,
+  Gift,
+  Award,
+  Megaphone,
+} from 'lucide-react';
+
+const iconMap = {
+  'business-stationery': FileText,
+  'marketing-promotional': Megaphone,
+  'large-format': Eye,
+  packaging: Package,
+  'labels-stickers': Tag,
+  'promotional-items': Gift,
+  'event-corporate': Award,
+  'graphic-designing': Palette,
+};
+
+const Catalogue = () => {
+  const categoryImages = {
+    'business-stationery': 'https://picsum.photos/seed/stationery/600/400',
+    'marketing-promotional': 'https://picsum.photos/seed/promotional/600/400',
+    'large-format': 'https://picsum.photos/seed/largeformat/600/400',
+    packaging: 'https://picsum.photos/seed/packaging/600/400',
+    'labels-stickers': 'https://picsum.photos/seed/labels/600/400',
+    'promotional-items': 'https://picsum.photos/seed/promoitems/600/400',
+    'event-corporate': 'https://picsum.photos/seed/events/600/400',
+    'graphic-designing': 'https://picsum.photos/seed/designing/600/400',
+  };
+
+  const getProductCount = (categorySlug) =>
+    products.filter((p) => p.category === categorySlug).length;
+
+  return (
+    <main>
+      {/* HERO BANNER */}
+      <section className="relative bg-brand-dark py-24">
+        <div className="absolute inset-0 bg-black/60" />
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-30"
+          style={{ backgroundImage: "url('https://picsum.photos/seed/catalogue-hero/1920/600')" }}
+        />
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Product Catalogue</h1>
+          <p className="text-gray-300 text-lg max-w-2xl mb-6">
+            Explore our complete range of printing, designing, branding and promotional solutions
+          </p>
+          <nav className="flex items-center text-sm text-gray-400">
+            <Link to="/" className="hover:text-white transition-colors">
+              Home
+            </Link>
+            <ChevronRight className="w-4 h-4 mx-2" />
+            <span className="text-white">Catalogue</span>
+          </nav>
+        </div>
+      </section>
+
+      {/* CATALOGUE CATEGORIES */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <SectionTitle
+            title="Browse Our Categories"
+            subtitle="Find the perfect printing and design solutions for your needs"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {categories.map((category) => {
+              const Icon = iconMap[category.slug] || Printer;
+              const count = getProductCount(category.slug);
+              return (
+                <Link
+                  key={category.slug}
+                  to={`/products/${category.slug}`}
+                  className="group relative rounded-xl overflow-hidden h-72 block"
+                >
+                  <img
+                    src={categoryImages[category.slug]}
+                    alt={category.name}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-5">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Icon className="w-5 h-5 text-primary" />
+                      <h3 className="text-white font-bold text-lg">{category.name}</h3>
+                    </div>
+                    <p className="text-gray-300 text-sm mb-1">{count} Products</p>
+                    <p className="text-gray-400 text-xs">{category.description}</p>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* STATS SECTION */}
+      <section className="py-16 bg-primary">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+            100+ Products &nbsp;|&nbsp; 8 Categories &nbsp;|&nbsp; Professional Quality
+          </h2>
+          <p className="text-white/80 text-lg">
+            From business cards to large format printing, we've got you covered
+          </p>
+        </div>
+      </section>
+
+      {/* DOWNLOAD CATALOGUE CTA */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="bg-brand-dark rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+            <div className="flex-shrink-0">
+              <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center">
+                <Download className="w-10 h-10 text-primary" />
+              </div>
+            </div>
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Download Complete Catalogue</h2>
+              <p className="text-gray-300 mb-6">
+                Get our complete product catalogue with detailed specifications and pricing
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <a
+                  href="#"
+                  className="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                >
+                  <Download className="w-5 h-5" />
+                  Download Catalogue
+                </a>
+                <Link
+                  to="/contact"
+                  state={{ subject: 'catalogue-request' }}
+                  className="inline-flex items-center justify-center gap-2 border border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors"
+                >
+                  <FileText className="w-5 h-5" />
+                  Request Printed Catalogue
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NEED HELP SECTION */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Not sure what you need?</h2>
+          <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto">
+            Our team can help you find the right products for your requirements.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+          >
+            Get in Touch
+            <ChevronRight className="w-5 h-5" />
+          </Link>
+        </div>
+      </section>
+    </main>
+  );
+};
+
+export default Catalogue;
