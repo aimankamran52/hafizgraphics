@@ -27,29 +27,14 @@ const iconMap = {
 };
 
 const Catalogue = () => {
-  const categoryImages = {
-    'business-stationery': 'https://picsum.photos/seed/stationery/600/400',
-    'marketing-promotional': 'https://picsum.photos/seed/promotional/600/400',
-    'large-format': 'https://picsum.photos/seed/largeformat/600/400',
-    packaging: 'https://picsum.photos/seed/packaging/600/400',
-    'labels-stickers': 'https://picsum.photos/seed/labels/600/400',
-    'promotional-items': 'https://picsum.photos/seed/promoitems/600/400',
-    'event-corporate': 'https://picsum.photos/seed/events/600/400',
-    'graphic-designing': 'https://picsum.photos/seed/designing/600/400',
-  };
-
   const getProductCount = (categorySlug) =>
     products.filter((p) => p.category === categorySlug).length;
 
   return (
     <main>
       {/* HERO BANNER */}
-      <section className="relative bg-brand-dark py-24">
-        <div className="absolute inset-0 bg-black/60" />
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{ backgroundImage: "url('https://picsum.photos/seed/catalogue-hero/1920/600')" }}
-        />
+      <section className="relative bg-brand-dark py-28 md:py-36">
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-dark via-brand-navy to-brand-darker" />
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Product Catalogue</h1>
           <p className="text-gray-300 text-lg max-w-2xl mb-6">
@@ -66,7 +51,7 @@ const Catalogue = () => {
       </section>
 
       {/* CATALOGUE CATEGORIES */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <SectionTitle
             title="Browse Our Categories"
@@ -80,22 +65,14 @@ const Catalogue = () => {
                 <Link
                   key={category.slug}
                   to={`/products/${category.slug}`}
-                  className="group relative rounded-xl overflow-hidden h-72 block"
+                  className="group bg-white border border-gray-200 rounded-xl p-6 hover:border-brand-gold hover:shadow-lg transition-all duration-300 block"
                 >
-                  <img
-                    src={categoryImages[category.slug]}
-                    alt={category.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Icon className="w-5 h-5 text-primary" />
-                      <h3 className="text-white font-bold text-lg">{category.name}</h3>
-                    </div>
-                    <p className="text-gray-300 text-sm mb-1">{count} Products</p>
-                    <p className="text-gray-400 text-xs">{category.description}</p>
+                  <div className="w-14 h-14 rounded-full bg-brand-gold/10 flex items-center justify-center mb-4 group-hover:bg-brand-gold/20 transition-colors">
+                    <Icon className="w-6 h-6 text-brand-gold" />
                   </div>
+                  <h3 className="text-gray-900 font-bold text-lg mb-1 group-hover:text-brand-gold transition-colors">{category.name}</h3>
+                  <p className="text-gray-500 text-sm mb-1">{count} Products</p>
+                  <p className="text-gray-400 text-xs">{category.description}</p>
                 </Link>
               );
             })}
@@ -104,7 +81,7 @@ const Catalogue = () => {
       </section>
 
       {/* STATS SECTION */}
-      <section className="py-16 bg-primary">
+      <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
             100+ Products &nbsp;|&nbsp; 8 Categories &nbsp;|&nbsp; Professional Quality
@@ -116,7 +93,7 @@ const Catalogue = () => {
       </section>
 
       {/* DOWNLOAD CATALOGUE CTA */}
-      <section className="py-20">
+      <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="bg-brand-dark rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
             <div className="flex-shrink-0">
@@ -152,7 +129,7 @@ const Catalogue = () => {
       </section>
 
       {/* NEED HELP SECTION */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Not sure what you need?</h2>
           <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto">

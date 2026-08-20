@@ -5,7 +5,7 @@ import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from "../data/siteInfo";
 export default function ProductCard({ product }) {
   const startingPrice =
     product.pricing && product.pricing.length > 0
-      ? `Starting from Rs. ${product.pricing[0].price.toLocaleString()}`
+      ? product.pricing[0].price
       : "";
 
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(

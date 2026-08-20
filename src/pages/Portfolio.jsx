@@ -116,12 +116,8 @@ const Portfolio = () => {
   return (
     <main>
       {/* HERO BANNER */}
-      <section className="relative bg-brand-dark py-24">
-        <div className="absolute inset-0 bg-black/60" />
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{ backgroundImage: "url('https://picsum.photos/seed/portfolio-hero/1920/600')" }}
-        />
+      <section className="relative bg-brand-dark py-28 md:py-36">
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-dark via-brand-navy to-brand-darker" />
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Work</h1>
           <p className="text-gray-300 text-lg max-w-2xl mb-6">
@@ -138,7 +134,7 @@ const Portfolio = () => {
       </section>
 
       {/* FILTER TABS */}
-      <section className="py-8 bg-white border-b sticky top-16 z-30">
+      <section className="py-10 bg-white border-b sticky top-16 z-30">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap gap-2 justify-center">
             {filterCategories.map((cat) => (
@@ -159,20 +155,21 @@ const Portfolio = () => {
       </section>
 
       {/* PORTFOLIO GRID */}
-      <section className="py-20">
+      <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredItems.map((item) => (
-              <div
-                key={item.id}
-                className="group relative rounded-xl overflow-hidden cursor-pointer h-72"
-                onClick={() => setSelectedItem(item)}
-              >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+                <div
+                  key={item.id}
+                  className="group relative rounded-xl overflow-hidden cursor-pointer h-72"
+                  onClick={() => setSelectedItem(item)}
+                >
+                  <div className="w-full h-full bg-gradient-to-br from-brand-dark to-brand-navy flex items-center justify-center">
+                    <div className="text-center p-4">
+                      <Eye className="w-12 h-12 text-brand-gold/40 mx-auto mb-2" />
+                      <p className="text-white/60 text-sm">{item.category}</p>
+                    </div>
+                  </div>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/70 transition-all duration-300 flex items-center justify-center">
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center p-4">
                     <Eye className="w-10 h-10 text-primary mx-auto mb-3" />
@@ -212,11 +209,12 @@ const Portfolio = () => {
             >
               <X className="w-5 h-5 text-gray-800" />
             </button>
-            <img
-              src={selectedItem.image}
-              alt={selectedItem.title}
-              className="w-full h-64 md:h-80 object-cover rounded-t-2xl"
-            />
+            <div className="w-full h-64 md:h-80 bg-gradient-to-br from-brand-dark to-brand-navy flex items-center justify-center rounded-t-2xl">
+              <div className="text-center">
+                <Eye className="w-16 h-16 text-brand-gold/40 mx-auto mb-2" />
+                <p className="text-white/60">{selectedItem.category}</p>
+              </div>
+            </div>
             <div className="p-6 md:p-8">
               <span className="inline-block bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full mb-4">
                 {selectedItem.category}
@@ -239,7 +237,7 @@ const Portfolio = () => {
       )}
 
       {/* CTA SECTION */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Have a project in mind?</h2>
           <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto">

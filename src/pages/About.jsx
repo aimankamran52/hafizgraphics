@@ -75,7 +75,7 @@ export default function About() {
       </section>
 
       {/* ========== ABOUT INTRO ========== */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-20 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -107,21 +107,21 @@ export default function About() {
               </div>
             </div>
 
-            <div className="relative">
-              <img
-                src="https://picsum.photos/seed/about-hafiz/600/500"
-                alt="About Hafiz Graphics"
-                className="rounded-xl shadow-lg w-full object-cover aspect-[6/5]"
-              />
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-brand-gold/20 rounded-xl -z-10" />
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-brand-dark/10 rounded-xl -z-10" />
+            <div className="relative bg-gradient-to-br from-brand-dark to-brand-navy rounded-xl p-12 flex items-center justify-center min-h-[400px]">
+              <div className="text-center">
+                <div className="w-24 h-24 rounded-full bg-brand-gold/20 flex items-center justify-center mx-auto mb-4">
+                  <Award size={40} className="text-brand-gold" />
+                </div>
+                <p className="text-white text-lg font-display font-bold">Hafiz Graphics</p>
+                <p className="text-brand-gold text-sm mt-1">Creative Design & Printing</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ========== MISSION & VISION ========== */}
-      <section className="py-16 md:py-24 bg-brand-light">
+      <section className="py-20 md:py-32 bg-brand-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             subtitle="Our Purpose"
@@ -161,7 +161,7 @@ export default function About() {
       </section>
 
       {/* ========== FOUNDER & CEO ========== */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-20 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             subtitle="Leadership"
@@ -170,11 +170,15 @@ export default function About() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
             <div className="flex justify-center">
-              <img
-                src="https://picsum.photos/seed/founder-hafiz/400/500"
-                alt="Hafiz Mobeen Ahmed"
-                className="rounded-xl shadow-lg w-full max-w-sm object-cover aspect-[4/5] border-4 border-brand-gold/30"
-              />
+              <div className="bg-gradient-to-br from-brand-dark to-brand-navy rounded-xl p-12 flex items-center justify-center min-h-[400px] w-full max-w-sm border-4 border-brand-gold/30">
+                <div className="text-center">
+                  <div className="w-20 h-20 rounded-full bg-brand-gold/20 flex items-center justify-center mx-auto mb-4">
+                    <span className="text-3xl font-display font-bold text-brand-gold">HM</span>
+                  </div>
+                  <p className="text-white text-lg font-display font-bold">Hafiz Mobeen Ahmed</p>
+                  <p className="text-brand-gold text-sm mt-1">Founder & CEO</p>
+                </div>
+              </div>
             </div>
 
             <div>
@@ -230,7 +234,7 @@ export default function About() {
       </section>
 
       {/* ========== OUR VALUES ========== */}
-      <section className="py-16 md:py-24 bg-brand-light">
+      <section className="py-20 md:py-32 bg-brand-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle subtitle="What Drives Us" title="Our Values" />
 

@@ -133,7 +133,7 @@ export default function Corporate() {
       </section>
 
       {/* ========== INTRO ========== */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-20 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-display mb-4">
@@ -149,7 +149,7 @@ export default function Corporate() {
       </section>
 
       {/* ========== CORPORATE SERVICES ========== */}
-      <section className="py-16 md:py-24 bg-brand-light">
+      <section className="py-20 md:py-32 bg-brand-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             subtitle="What We Offer"
@@ -181,7 +181,7 @@ export default function Corporate() {
       </section>
 
       {/* ========== WHY CHOOSE US ========== */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-20 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             subtitle="Our Advantage"
@@ -201,18 +201,20 @@ export default function Corporate() {
             </div>
 
             <div className="flex justify-center">
-              <img
-                src="https://picsum.photos/seed/corporate-solutions/500/500"
-                alt="Corporate Solutions"
-                className="rounded-xl shadow-lg w-full max-w-md object-cover aspect-square"
-              />
+              <div className="bg-gradient-to-br from-brand-dark to-brand-navy rounded-xl p-12 flex items-center justify-center w-full max-w-md aspect-square">
+                <div className="text-center">
+                  <Building2 size={48} className="text-brand-gold/40 mx-auto mb-3" />
+                  <p className="text-white text-lg font-display font-bold">Corporate Solutions</p>
+                  <p className="text-brand-gold text-sm mt-1">Your Printing Partner</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ========== HOW IT WORKS ========== */}
-      <section className="py-16 md:py-24 bg-brand-light">
+      <section className="py-20 md:py-32 bg-brand-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle subtitle="Our Process" title="How It Works" />
 
@@ -241,7 +243,7 @@ export default function Corporate() {
       </section>
 
       {/* ========== CTA SECTION ========== */}
-      <section className="py-16 md:py-24 bg-brand-dark">
+      <section className="py-20 md:py-32 bg-brand-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white font-display mb-4">
             Ready to streamline your printing needs?

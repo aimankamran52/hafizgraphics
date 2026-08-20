@@ -146,9 +146,7 @@ export default function ProductDetail() {
               <div className="bg-gray-50 rounded-xl p-4 mb-6">
                 <p className="text-sm text-gray-500 mb-1">Starting from</p>
                 <p className="text-2xl font-bold text-brand-dark">
-                  {product.pricing[0].price.includes('XXX')
-                    ? 'Contact for price'
-                    : product.pricing[0].price}
+                  {product.pricing[0].price}
                 </p>
               </div>
             )}
@@ -256,7 +254,6 @@ export default function ProductDetail() {
                 <tbody>
                   {product.pricing.map((tier, index) => {
                     const isPopular = tier.quantity === 1000 || tier.quantity === '1000'
-                    const isContactPrice = tier.price.includes('XXX')
                     return (
                       <tr
                         key={index}
@@ -277,11 +274,7 @@ export default function ProductDetail() {
                           </div>
                         </td>
                         <td className="py-3 px-4">
-                          {isContactPrice ? (
-                            <span className="text-brand-gold font-semibold">Contact for price</span>
-                          ) : (
-                            <span className="font-semibold text-brand-dark">{tier.price}</span>
-                          )}
+                          <span className="font-semibold text-brand-dark">{tier.price}</span>
                         </td>
                       </tr>
                     )

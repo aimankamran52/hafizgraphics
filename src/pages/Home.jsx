@@ -62,19 +62,19 @@ const features = [
 
 const testimonials = [
   {
-    text: "Excellent quality and professional service. Hafiz Graphics delivered exactly what we needed.",
-    name: "Ahmed Khan",
-    designation: "Marketing Director, TechCorp Solutions",
+    text: "Hum ne visiting cards banwaye aur bohat achi quality mili. Ab sari printing yahan se karwata hoon. Highly recommended!",
+    name: "Asif Mehmood",
+    designation: "Owner, Al-Rehman Traders",
   },
   {
-    text: "We've been working with Hafiz Graphics for 2 years. Their consistency and quality is unmatched.",
-    name: "Fatima Ali",
-    designation: "Brand Manager, StyleHouse",
+    text: "We needed 2000 file folders urgently. They finished in 3 days with excellent quality. Really professional team.",
+    name: "Dr. Ayesha Siddiqui",
+    designation: "COO, City Medical Centre",
   },
   {
-    text: "From business cards to event backdrops, they handle everything professionally.",
-    name: "Muhammad Hassan",
-    designation: "Operations Head, Global Academy",
+    text: "For 18 months all our office stationery has been handled by them. Consistent quality and never missed a deadline.",
+    name: "Faisal Naveed",
+    designation: "Director Admin, Pak Systems",
   },
 ];
 
@@ -97,13 +97,8 @@ export default function Home() {
       {/* ========== HERO SECTION ========== */}
       <section
         className="relative min-h-screen flex items-center"
-        style={{
-          backgroundImage:
-            "url(https://picsum.photos/seed/printing-hero/1920/1080)",
-        }}
       >
-        <div className="absolute inset-0 bg-cover bg-center" />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/90 to-brand-dark/70" />
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-dark via-brand-navy to-brand-darker" />
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
           <div className="max-w-3xl fade-in">
@@ -149,14 +144,14 @@ export default function Home() {
       </section>
 
       {/* ========== WHY HAFIZ GRAPHICS ========== */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-20 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             subtitle="Why Choose Us"
             title="Why Hafiz Graphics"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
@@ -181,7 +176,7 @@ export default function Home() {
       </section>
 
       {/* ========== FEATURED PRODUCTS ========== */}
-      <section className="py-16 md:py-24 bg-brand-light">
+      <section className="py-20 md:py-32 bg-brand-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle subtitle="Our Products" title="Featured Products" />
 
@@ -204,7 +199,7 @@ export default function Home() {
       </section>
 
       {/* ========== PRODUCT CATEGORIES ========== */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-20 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             subtitle="Browse by Category"
@@ -220,22 +215,17 @@ export default function Home() {
                 <Link
                   key={category.id}
                   to={`/products/${category.slug}`}
-                  className="group relative rounded-xl overflow-hidden aspect-[4/3]"
+                  className="group relative rounded-xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-brand-dark to-brand-navy flex flex-col items-center justify-center p-6 text-center hover:from-brand-gold/20 hover:to-brand-gold/10 transition-all duration-300 border border-gray-100 hover:border-brand-gold/30"
                 >
-                  <img
-                    src={`https://picsum.photos/seed/${category.slug}/400/300`}
-                    alt={category.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-brand-dark/20 to-transparent group-hover:from-brand-gold/80 transition-all duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <h3 className="text-white font-semibold text-sm md:text-base">
-                      {category.name}
-                    </h3>
-                    <p className="text-gray-200 text-xs mt-1">
-                      {productCount} Products
-                    </p>
+                  <div className="w-14 h-14 rounded-full bg-brand-gold/10 flex items-center justify-center mb-3 group-hover:bg-brand-gold/20 transition-colors">
+                    <Package size={28} className="text-brand-gold" />
                   </div>
+                  <h3 className="text-white font-semibold text-sm md:text-base">
+                    {category.name}
+                  </h3>
+                  <p className="text-gray-300 text-xs mt-1">
+                    {productCount} Products
+                  </p>
                 </Link>
               );
             })}
@@ -244,7 +234,7 @@ export default function Home() {
       </section>
 
       {/* ========== CORPORATE SOLUTIONS CTA ========== */}
-      <section className="py-16 md:py-24 bg-brand-dark relative overflow-hidden">
+      <section className="py-20 md:py-32 bg-brand-dark relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-5"
           style={{
@@ -296,14 +286,14 @@ export default function Home() {
       </section>
 
       {/* ========== TESTIMONIALS ========== */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-20 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             subtitle="Testimonials"
             title="What Our Customers Say"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
@@ -355,7 +345,7 @@ export default function Home() {
       </section>
 
       {/* ========== CTA SECTION ========== */}
-      <section className="py-16 md:py-20 bg-brand-gold">
+      <section className="py-20 md:py-28 bg-brand-gold">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-brand-dark font-display mb-3">
             Ready to Start Your Project?
