@@ -93,8 +93,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <p className="text-gray-600 text-lg leading-relaxed">
-              Have a project in mind? Contact Hafiz Graphics for a quotation or
-              discuss your requirements with our team.
+              Contact us for a quotation or to discuss your project requirements.
             </p>
           </div>
 
@@ -377,21 +376,6 @@ export default function Contact() {
                   )}
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ========== MAP SECTION ========== */}
-      <section className="py-16 md:py-24 bg-brand-light">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle subtitle="Location" title="Find Us" />
-
-          <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-sm overflow-hidden">
-            <div className="bg-brand-dark/5 h-64 flex flex-col items-center justify-center text-center p-8">
-              <MapPin size={48} className="text-brand-gold mb-4" />
-              <p className="text-gray-500 mb-2">Map coming soon</p>
-              <p className="text-sm text-gray-400">{ADDRESS}</p>
             </div>
           </div>
         </div>

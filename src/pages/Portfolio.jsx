@@ -11,7 +11,6 @@ const portfolioItems = [
     title: 'Corporate Branding — TechCorp Solutions',
     category: 'Branding',
     description: 'Complete brand identity including logo, visiting cards, letterheads and envelopes',
-    image: 'https://picsum.photos/seed/portfolio-branding1/600/400',
     tags: ['Logo', 'Stationery'],
   },
   {
@@ -19,7 +18,6 @@ const portfolioItems = [
     title: 'Event Backdrops — Global Academy Annual Day',
     category: 'Events',
     description: 'Custom stage backdrop and event branding materials',
-    image: 'https://picsum.photos/seed/portfolio-events1/600/400',
     tags: ['Backdrop', 'Stage'],
   },
   {
@@ -27,7 +25,6 @@ const portfolioItems = [
     title: 'Product Packaging — Sweet Treats Bakery',
     category: 'Packaging',
     description: 'Custom food packaging including cake boxes and paper bags',
-    image: 'https://picsum.photos/seed/portfolio-packaging1/600/400',
     tags: ['Cake Box', 'Paper Bags'],
   },
   {
@@ -35,7 +32,6 @@ const portfolioItems = [
     title: 'Corporate Stationery — StyleHouse Fashion',
     category: 'Branding',
     description: 'Premium visiting cards, letterheads and corporate folders',
-    image: 'https://picsum.photos/seed/portfolio-branding2/600/400',
     tags: ['Cards', 'Letterhead'],
   },
   {
@@ -43,7 +39,6 @@ const portfolioItems = [
     title: 'Large Format Printing — City Mall Exhibition',
     category: 'Printing',
     description: 'Exhibition banners, standees and promotional displays',
-    image: 'https://picsum.photos/seed/portfolio-printing1/600/400',
     tags: ['Banner', 'Standee'],
   },
   {
@@ -51,7 +46,6 @@ const portfolioItems = [
     title: 'Social Media Kit — Fresh Bites Restaurant',
     category: 'Social Media',
     description: 'Complete social media design package for Instagram and Facebook',
-    image: 'https://picsum.photos/seed/portfolio-social1/600/400',
     tags: ['Social Media', 'Digital'],
   },
   {
@@ -59,7 +53,6 @@ const portfolioItems = [
     title: 'Promotional Products — TechWave Solutions',
     category: 'Corporate',
     description: 'Custom mugs, t-shirts and lanyards for corporate event',
-    image: 'https://picsum.photos/seed/portfolio-corporate1/600/400',
     tags: ['Mugs', 'T-Shirts'],
   },
   {
@@ -67,7 +60,6 @@ const portfolioItems = [
     title: 'Menu Design — Kabul House Restaurant',
     category: 'Printing',
     description: 'Premium restaurant menu design and printing',
-    image: 'https://picsum.photos/seed/portfolio-printing2/600/400',
     tags: ['Menu', 'Design'],
   },
   {
@@ -75,7 +67,6 @@ const portfolioItems = [
     title: 'Certificate Design — Punjab Education Board',
     category: 'Events',
     description: 'Custom certificates with foil printing and numbering',
-    image: 'https://picsum.photos/seed/portfolio-events2/600/400',
     tags: ['Certificate', 'Foil'],
   },
   {
@@ -83,7 +74,6 @@ const portfolioItems = [
     title: 'Retail Packaging — Noor Jewellers',
     category: 'Packaging',
     description: 'Luxury gift boxes and product packaging for jewelry',
-    image: 'https://picsum.photos/seed/portfolio-packaging2/600/400',
     tags: ['Gift Box', 'Premium'],
   },
   {
@@ -91,7 +81,6 @@ const portfolioItems = [
     title: 'Stickers & Labels — Herbal Care Pakistan',
     category: 'Branding',
     description: 'Product labels and die-cut stickers for organic products',
-    image: 'https://picsum.photos/seed/portfolio-branding3/600/400',
     tags: ['Labels', 'Stickers'],
   },
   {
@@ -99,7 +88,6 @@ const portfolioItems = [
     title: 'Office Branding — InnovateTech',
     category: 'Corporate',
     description: 'Complete office branding including signs, letterheads and digital presence',
-    image: 'https://picsum.photos/seed/portfolio-corporate2/600/400',
     tags: ['Signage', 'Branding'],
   },
 ];

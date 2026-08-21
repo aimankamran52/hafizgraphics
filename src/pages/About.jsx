@@ -28,26 +28,22 @@ const values = [
   {
     icon: Award,
     title: "Quality",
-    description:
-      "We are committed to delivering the highest quality in every project, from design to final print.",
+    description: "Highest quality in every project.",
   },
   {
     icon: Palette,
     title: "Creativity",
-    description:
-      "We bring fresh and innovative design ideas that help your brand stand out from the competition.",
+    description: "Fresh designs that make your brand stand out.",
   },
   {
     icon: Heart,
     title: "Reliability",
-    description:
-      "Consistent communication, on-time delivery and dependable service you can count on.",
+    description: "On-time delivery you can count on.",
   },
   {
     icon: Star,
     title: "Affordability",
-    description:
-      "Premium quality printing solutions at competitive prices that suit your budget.",
+    description: "Premium quality at competitive prices.",
   },
 ];
 
@@ -84,15 +80,8 @@ export default function About() {
                 title="About Hafiz Graphics"
                 centered={false}
               />
-              <p className="text-gray-600 leading-relaxed mb-6">
-                Hafiz Graphics is a creative design and printing company
-                committed to helping businesses present themselves professionally
-                through high-quality design, printing and branding solutions.
-              </p>
               <p className="text-gray-600 leading-relaxed mb-8">
-                We work with a diverse range of clients across Pakistan,
-                providing them with end-to-end solutions from graphic design to
-                final print production and delivery.
+                Hafiz Graphics is a creative design and printing company helping businesses across Pakistan with high-quality design, printing and branding solutions.
               </p>
 
               <div className="flex flex-wrap gap-2">
@@ -193,13 +182,7 @@ export default function About() {
               </p>
 
               <p className="text-gray-600 leading-relaxed mb-6">
-                Hafiz Mobeen Ahmed is the Founder and CEO of Hafiz Graphics,
-                with a vision to build a professional creative and printing
-                company focused on quality, customer satisfaction and long-term
-                business relationships. His approach is centered around
-                understanding the client's requirements, delivering quality work
-                and creating solutions that help businesses strengthen their
-                professional image.
+                Founder and CEO of Hafiz Graphics, focused on quality, customer satisfaction and long-term business relationships.
               </p>
 
               <div className="grid grid-cols-3 gap-6 pt-6 border-t border-gray-100">

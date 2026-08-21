@@ -3,11 +3,6 @@ import { Eye, MessageCircle } from "lucide-react";
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from "../data/siteInfo";
 
 export default function ProductCard({ product }) {
-  const startingPrice =
-    product.pricing && product.pricing.length > 0
-      ? product.pricing[0].price
-      : "";
-
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     `${WHATSAPP_MESSAGE}\n\nI am interested in: ${product.name}`
   )}`;
@@ -15,12 +10,8 @@ export default function ProductCard({ product }) {
   return (
     <div className="product-card-hover bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
       {/* Image */}
-      <div className="relative overflow-hidden aspect-[4/3]">
-        <img
-          src={product.image}
-          alt={product.name}
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-        />
+      <div className="relative overflow-hidden aspect-[4/3] bg-gradient-to-br from-brand-dark to-brand-navy flex items-center justify-center">
+        <span className="text-brand-gold text-2xl font-display font-bold">{product.name.charAt(0)}</span>
       </div>
 
       {/* Content */}
@@ -32,12 +23,6 @@ export default function ProductCard({ product }) {
         {product.shortDescription && (
           <p className="text-sm text-gray-500 mb-3 line-clamp-2 flex-1">
             {product.shortDescription}
-          </p>
-        )}
-
-        {startingPrice && (
-          <p className="text-brand-gold font-bold text-sm mb-4">
-            {startingPrice}
           </p>
         )}
 

@@ -26,37 +26,25 @@ const features = [
     icon: Shield,
     title: "Professional Quality",
     description:
-      "High-quality design and printing solutions that represent your brand professionally.",
-  },
-  {
-    icon: Star,
-    title: "Competitive Pricing",
-    description:
-      "Quantity-based pricing designed to provide better value for bulk orders.",
+      "High-quality design and printing that represents your brand professionally.",
   },
   {
     icon: Palette,
-    title: "Complete Branding Solutions",
+    title: "Complete Branding",
     description:
-      "From designing to printing, get your branding requirements from one place.",
+      "From design to print — all your branding needs in one place.",
   },
   {
     icon: Truck,
     title: "Reliable Service",
     description:
-      "Professional communication, timely delivery and attention to detail.",
+      "Timely delivery and professional communication every time.",
   },
   {
     icon: Users,
     title: "Corporate Solutions",
     description:
-      "Specialized solutions for companies, schools, universities, restaurants, NGOs and organizations.",
-  },
-  {
-    icon: Heart,
-    title: "Customer Focused",
-    description:
-      "We focus on building long-term relationships rather than one-time orders.",
+      "Specialized printing solutions for businesses, schools and organizations.",
   },
 ];
 
@@ -107,9 +95,7 @@ export default function Home() {
               <span className="text-brand-gold">Printed to Perfection.</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-10 max-w-2xl">
-              Hafiz Graphics provides professional graphic designing, printing
-              and branding solutions for businesses, organizations, events and
-              individuals.
+              Professional graphic designing, printing and branding solutions in Pakistan.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-16">
@@ -248,9 +234,7 @@ export default function Home() {
               Looking for a Reliable Printing Partner?
             </h2>
             <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              We provide complete corporate printing solutions tailored to your
-              business needs. From monthly stationery to event branding, we have
-              you covered.
+              Complete corporate printing solutions — from stationery to event branding.
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-10 max-w-xl mx-auto">

@@ -38,7 +38,7 @@ const Catalogue = () => {
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Product Catalogue</h1>
           <p className="text-gray-300 text-lg max-w-2xl mb-6">
-            Explore our complete range of printing, designing, branding and promotional solutions
+            Printing, designing, branding and promotional solutions
           </p>
           <nav className="flex items-center text-sm text-gray-400">
             <Link to="/" className="hover:text-white transition-colors">
@@ -80,18 +80,6 @@ const Catalogue = () => {
         </div>
       </section>
 
-      {/* STATS SECTION */}
-      <section className="py-20 bg-primary">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-            100+ Products &nbsp;|&nbsp; 8 Categories &nbsp;|&nbsp; Professional Quality
-          </h2>
-          <p className="text-white/80 text-lg">
-            From business cards to large format printing, we've got you covered
-          </p>
-        </div>
-      </section>
-
       {/* DOWNLOAD CATALOGUE CTA */}
       <section className="py-24">
         <div className="container mx-auto px-4">
@@ -128,22 +116,6 @@ const Catalogue = () => {
         </div>
       </section>
 
-      {/* NEED HELP SECTION */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Not sure what you need?</h2>
-          <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto">
-            Our team can help you find the right products for your requirements.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-          >
-            Get in Touch
-            <ChevronRight className="w-5 h-5" />
-          </Link>
-        </div>
-      </section>
     </main>
   );
 };

@@ -78,8 +78,6 @@ const benefits = [
   "Fast turnaround times",
   "Complete design support",
   "Nationwide delivery",
-  "Easy reordering process",
-  "Quality assurance guarantee",
 ];
 
 const processSteps = [
@@ -140,9 +138,7 @@ export default function Corporate() {
               Looking for a reliable printing partner for your company?
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Hafiz Graphics provides ongoing printing and designing solutions
-              for businesses. We understand the unique needs of corporate clients
-              and deliver consistent quality with competitive pricing.
+              Ongoing printing and designing solutions for businesses with consistent quality.
             </p>
           </div>
         </div>

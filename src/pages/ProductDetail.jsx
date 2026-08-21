@@ -4,8 +4,8 @@ import { getProductBySlug, categories, getProductsByCategory } from '../data/pro
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from '../data/siteInfo'
 import ProductCard from '../components/ProductCard'
 import {
-  ArrowLeft, ArrowRight, Phone, MessageCircle, Check,
-  Package, Clock, Ruler, Layers, Printer, FileText, Star, ChevronRight
+  ArrowLeft, Phone, MessageCircle,
+  Package, Ruler, Layers, Printer, FileText, Star, ChevronRight
 } from 'lucide-react'
 
 export default function ProductDetail() {
@@ -90,12 +90,11 @@ export default function ProductDetail() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Product Image */}
           <div className="relative">
-            <div className="aspect-square rounded-2xl overflow-hidden bg-gray-100 shadow-lg">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-full object-cover"
-              />
+            <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-brand-dark to-brand-navy shadow-lg flex items-center justify-center">
+              <div className="text-center">
+                <span className="text-6xl font-display font-bold text-brand-gold/30">{product.name.charAt(0)}</span>
+                <p className="text-white/40 mt-2 text-sm">{product.name}</p>
+              </div>
             </div>
             {product.featured && (
               <div className="absolute top-4 left-4 bg-brand-gold text-white px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1">
@@ -125,30 +124,6 @@ export default function ProductDetail() {
               <p className="text-gray-600 text-lg mb-6 leading-relaxed">
                 {product.shortDescription}
               </p>
-            )}
-
-            <div className="flex flex-wrap gap-3 mb-6">
-              {product.productionTime && (
-                <div className="flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-lg text-sm">
-                  <Clock className="w-4 h-4" />
-                  <span className="font-medium">{product.productionTime}</span>
-                </div>
-              )}
-              {product.minQuantity && (
-                <div className="flex items-center gap-2 bg-purple-50 text-purple-700 px-4 py-2 rounded-lg text-sm">
-                  <Package className="w-4 h-4" />
-                  <span className="font-medium">Min. {product.minQuantity} pcs</span>
-                </div>
-              )}
-            </div>
-
-            {product.pricing && product.pricing.length > 0 && (
-              <div className="bg-gray-50 rounded-xl p-4 mb-6">
-                <p className="text-sm text-gray-500 mb-1">Starting from</p>
-                <p className="text-2xl font-bold text-brand-dark">
-                  {product.pricing[0].price}
-                </p>
-              </div>
             )}
 
             <div className="flex flex-col sm:flex-row gap-3 mt-auto">
@@ -231,64 +206,6 @@ export default function ProductDetail() {
                   </div>
                 </div>
               )}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Quantity-Based Pricing */}
-      {product.pricing && product.pricing.length > 0 && (
-        <section className="container mx-auto px-4 py-8">
-          <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm">
-            <h2 className="text-2xl font-display font-bold text-brand-dark mb-6">
-              Quantity-Based Pricing
-            </h2>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b border-gray-200">
-                    <th className="text-left py-3 px-4 font-semibold text-gray-700">Quantity</th>
-                    <th className="text-left py-3 px-4 font-semibold text-gray-700">Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {product.pricing.map((tier, index) => {
-                    const isPopular = tier.quantity === 1000 || tier.quantity === '1000'
-                    return (
-                      <tr
-                        key={index}
-                        className={`border-b border-gray-100 last:border-0 ${
-                          isPopular ? 'bg-brand-gold/5' : ''
-                        }`}
-                      >
-                        <td className="py-3 px-4">
-                          <div className="flex items-center gap-2">
-                            {isPopular && (
-                              <span className="bg-brand-gold text-white text-xs px-2 py-0.5 rounded-full font-medium">
-                                Popular
-                              </span>
-                            )}
-                            <span className="font-medium text-brand-dark">
-                              {tier.quantity} {typeof tier.quantity === 'number' ? 'pcs' : ''}
-                            </span>
-                          </div>
-                        </td>
-                        <td className="py-3 px-4">
-                          <span className="font-semibold text-brand-dark">{tier.price}</span>
-                        </td>
-                      </tr>
-                    )
-                  })}
-                </tbody>
-              </table>
-            </div>
-            <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-              <p className="text-sm text-gray-600">
-                <strong>Note:</strong> Prices may vary depending on size, material, finishing and customization. Contact us for an exact quotation.
-              </p>
-              <p className="text-sm text-gray-500 mt-2">
-                Need a different quantity? Contact us for a customized quotation.
-              </p>
             </div>
           </div>
         </section>

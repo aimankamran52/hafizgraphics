@@ -78,14 +78,6 @@ const reviews = [
   },
 ];
 
-const ratingBreakdown = [
-  { stars: 5, percentage: 85 },
-  { stars: 4, percentage: 10 },
-  { stars: 3, percentage: 5 },
-  { stars: 2, percentage: 0 },
-  { stars: 1, percentage: 0 },
-];
-
 function Reviews() {
   const averageRating = 4.9;
 
@@ -110,37 +102,6 @@ function Reviews() {
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             See what our clients say about working with Hafiz Graphics
           </p>
-        </div>
-      </section>
-
-      {/* Overall Rating */}
-      <section className="py-20 bg-brand-light">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle title="Overall Rating" subtitle="What our clients think about us" />
-          <div className="mt-12 max-w-2xl mx-auto text-center">
-            <div className="text-6xl font-bold text-brand-gold mb-2">{averageRating}</div>
-            <div className="flex items-center justify-center gap-1 mb-3">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-7 h-7 fill-brand-gold text-brand-gold" />
-              ))}
-            </div>
-            <p className="text-gray-500 mb-8">Based on 50+ Reviews</p>
-
-            <div className="space-y-3">
-              {ratingBreakdown.map((item) => (
-                <div key={item.stars} className="flex items-center gap-3">
-                  <span className="text-sm font-medium text-gray-600 w-12 text-right">{item.stars} Star</span>
-                  <div className="flex-1 h-3 bg-gray-200 rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-brand-gold rounded-full"
-                      style={{ width: `${item.percentage}%` }}
-                    />
-                  </div>
-                  <span className="text-sm text-gray-500 w-10">{item.percentage}%</span>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
@@ -190,30 +151,6 @@ function Reviews() {
             <MessageCircle className="w-5 h-5" />
             Share Feedback
           </a>
-        </div>
-      </section>
-
-      {/* Bottom CTA */}
-      <section className="py-20 bg-brand-gold">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-dark mb-4">
-            Ready to Experience Our Service?
-          </h2>
-          <p className="text-brand-dark/80 mb-8">Join hundreds of satisfied clients</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              to="/contact"
-              className="bg-brand-dark hover:bg-brand-dark/90 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
-            >
-              Get a Quote
-            </Link>
-            <Link
-              to="/portfolio"
-              className="bg-white hover:bg-gray-100 text-brand-dark font-semibold px-8 py-3 rounded-lg transition-colors"
-            >
-              View Our Work
-            </Link>
-          </div>
         </div>
       </section>
     </main>
