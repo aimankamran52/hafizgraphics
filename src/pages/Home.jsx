@@ -10,6 +10,7 @@ import {
   Palette,
   Truck,
   Users,
+  ChevronRight,
   MessageCircle,
 } from "lucide-react";
 
