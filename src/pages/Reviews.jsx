@@ -182,7 +182,7 @@ function Reviews() {
             We value your feedback. Help us improve and serve you better.
           </p>
           <a
-            href="https://wa.me/923001234567?text=I%20would%20like%20to%20share%20my%20feedback%20about%20Hafiz%20Graphics"
+            href="https://wa.me/923318111539?text=I%20would%20like%20to%20share%20my%20feedback%20about%20Hafiz%20Graphics"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-gold/90 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
