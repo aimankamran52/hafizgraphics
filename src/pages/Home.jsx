@@ -10,14 +10,6 @@ import {
   Palette,
   Truck,
   Users,
-  Heart,
-  Target,
-  Eye,
-  Megaphone,
-  Package,
-  Award,
-  ChevronRight,
-  Phone,
   MessageCircle,
 } from "lucide-react";
 
@@ -64,15 +56,6 @@ const testimonials = [
     name: "Faisal Naveed",
     designation: "Director Admin, Pak Systems",
   },
-];
-
-const corporateServices = [
-  "Monthly printing",
-  "Corporate stationery",
-  "Marketing material",
-  "Packaging",
-  "Event branding",
-  "Promotional products",
 ];
 
 const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
@@ -215,56 +198,6 @@ export default function Home() {
                 </Link>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* ========== CORPORATE SOLUTIONS CTA ========== */}
-      <section className="py-20 md:py-32 bg-brand-dark relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage:
-              "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4A843' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
-          }}
-        />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white font-display mb-4">
-              Looking for a Reliable Printing Partner?
-            </h2>
-            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              Complete corporate printing solutions — from stationery to event branding.
-            </p>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-10 max-w-xl mx-auto">
-              {corporateServices.map((service, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-2 text-gray-200 text-sm"
-                >
-                  <ChevronRight size={16} className="text-brand-gold shrink-0" />
-                  {service}
-                </div>
-              ))}
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-brand-gold text-brand-dark px-8 py-3.5 rounded-lg font-semibold hover:bg-brand-gold/90 transition-colors"
-              >
-                Become a Corporate Client
-                <ArrowRight size={18} />
-              </Link>
-              <Link
-                to="/products"
-                className="inline-flex items-center gap-2 border-2 border-brand-gold text-brand-gold px-8 py-3.5 rounded-lg font-semibold hover:bg-brand-gold hover:text-brand-dark transition-colors"
-              >
-                View Products
-                <Package size={18} />
-              </Link>
-            </div>
           </div>
         </div>
       </section>
