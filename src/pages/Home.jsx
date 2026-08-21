@@ -11,6 +11,7 @@ import {
   Truck,
   Users,
   ChevronRight,
+  Package,
   MessageCircle,
 } from "lucide-react";
 
