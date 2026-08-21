@@ -61,7 +61,6 @@ export default function Products() {
       {/* Hero Banner */}
       <section className="relative bg-brand-dark py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40" />
-        <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-10" />
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4">
