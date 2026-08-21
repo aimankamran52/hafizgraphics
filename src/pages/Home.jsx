@@ -328,43 +328,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ========== CTA SECTION ========== */}
-      <section className="py-20 md:py-28 bg-brand-gold">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-dark font-display mb-3">
-            Ready to Start Your Project?
-          </h2>
-          <p className="text-brand-dark/70 text-lg mb-10">
-            Get a free quotation today
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 bg-brand-dark text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-brand-dark/90 transition-colors"
-            >
-              <MessageCircle size={18} />
-              Get a Quote
-            </Link>
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-green-600 text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-green-700 transition-colors"
-            >
-              <MessageCircle size={18} />
-              WhatsApp Us
-            </a>
-            <a
-              href={`tel:${WHATSAPP_NUMBER}`}
-              className="inline-flex items-center gap-2 border-2 border-brand-dark text-brand-dark px-8 py-3.5 rounded-lg font-semibold hover:bg-brand-dark hover:text-white transition-colors"
-            >
-              <Phone size={18} />
-              Call Us
-            </a>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }

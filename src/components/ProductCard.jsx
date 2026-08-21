@@ -9,9 +9,7 @@ export default function ProductCard({ product }) {
   return (
     <div className="product-card-hover bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
       {/* Image */}
-      <div className="relative overflow-hidden aspect-[4/3] bg-gradient-to-br from-brand-dark to-brand-navy flex items-center justify-center">
-        <span className="text-brand-gold text-2xl font-display font-bold">{product.name.charAt(0)}</span>
-      </div>
+      <div className="relative overflow-hidden aspect-[4/3] bg-gradient-to-br from-brand-dark to-brand-navy" />
 
       {/* Content */}
       <div className="p-5 flex flex-col flex-1">
