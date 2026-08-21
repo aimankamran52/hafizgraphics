@@ -10,7 +10,6 @@ export const socialLinks = {
   instagram: "https://www.instagram.com/hafizgraphics.pk?igsi=MXcwZ3dwanhqODFsMA==",
   facebook: "https://www.facebook.com/share/1DWxpW86UD/?mibextid=wwXIfr",
   tiktok: "",
-  linkedin: "",
 };
 
 export const stats = [

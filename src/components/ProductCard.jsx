@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { Eye, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from "../data/siteInfo";
 
 export default function ProductCard({ product }) {
@@ -27,19 +26,12 @@ export default function ProductCard({ product }) {
         )}
 
         {/* Actions */}
-        <div className="flex gap-2 mt-auto">
-          <Link
-            to={`/products/${product.slug}`}
-            className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 border border-brand-gold text-brand-gold rounded-lg hover:bg-brand-gold hover:text-brand-dark transition-colors text-sm font-medium"
-          >
-            <Eye size={16} />
-            View Details
-          </Link>
+        <div className="mt-auto">
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-brand-gold text-brand-dark rounded-lg hover:bg-brand-gold/90 transition-colors text-sm font-medium"
+            className="flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-brand-gold text-brand-dark rounded-lg hover:bg-brand-gold/90 transition-colors text-sm font-medium"
           >
             <MessageCircle size={16} />
             Get Quote
