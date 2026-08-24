@@ -6,7 +6,7 @@ import Products from './pages/Products'
 import ProductDetail from './pages/ProductDetail'
 import Catalogue from './pages/Catalogue'
 import About from './pages/About'
-import Portfolio from './pages/Portfolio'
+
 import Reviews from './pages/Reviews'
 import Clients from './pages/Clients'
 import Contact from './pages/Contact'
@@ -23,7 +23,7 @@ function App() {
           <Route path="product/:slug" element={<ProductDetail />} />
           <Route path="catalogue" element={<Catalogue />} />
           <Route path="about" element={<About />} />
-          <Route path="portfolio" element={<Portfolio />} />
+  
           <Route path="reviews" element={<Reviews />} />
           <Route path="clients" element={<Clients />} />
           <Route path="contact" element={<Contact />} />
