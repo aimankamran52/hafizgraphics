@@ -1,7 +1,7 @@
 export const WHATSAPP_NUMBER = "923318111539";
 export const PHONE_NUMBER = "+92 331 8111539";
 export const EMAIL = "info@hafizgraphics.com";
-export const ADDRESS = "Lahore, Pakistan";
+export const ADDRESS = "Rawalpindi, Pakistan";
 export const WEBSITE_URL = "https://hafizgraphics.com";
 export const WHATSAPP_MESSAGE =
   "Assalam-o-Alaikum, I found Hafiz Graphics through your website. I would like to get a quotation.";
