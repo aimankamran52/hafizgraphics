@@ -104,7 +104,7 @@ const Portfolio = () => {
   return (
     <main>
       {/* HERO BANNER */}
-      <section className="relative bg-brand-dark py-28 md:py-36">
+      <section className="relative bg-brand-dark py-16 md:py-36">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-dark via-brand-navy to-brand-darker" />
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Work</h1>
@@ -122,7 +122,7 @@ const Portfolio = () => {
       </section>
 
       {/* FILTER TABS */}
-      <section className="py-10 bg-white border-b sticky top-16 z-30">
+      <section className="py-10 bg-white border-b sticky top-16 sm:top-20 z-40">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap gap-2 justify-center">
             {filterCategories.map((cat) => (

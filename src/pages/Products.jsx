@@ -59,15 +59,15 @@ export default function Products() {
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
-      <section className="relative bg-brand-dark py-20 md:py-28 overflow-hidden">
+      <section className="relative bg-brand-dark py-16 md:py-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40" />
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4">
               Our Products
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 mb-6">
-              Explore our complete range of printing, designing, branding and promotional solutions
+            <p className="text-base md:text-xl text-gray-200 mb-6">
+              Printing, designing, branding and promotional solutions
             </p>
             <nav className="flex items-center gap-2 text-sm text-gray-300">
               <Link to="/" className="hover:text-brand-gold transition-colors">Home</Link>
@@ -85,7 +85,7 @@ export default function Products() {
       </section>
 
       {/* Category Tabs */}
-      <section className="bg-white border-b border-gray-200 sticky top-0 z-20">
+      <section className="bg-white border-b border-gray-200 sticky top-16 sm:top-20 z-40">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-1 overflow-x-auto py-3 scrollbar-hide">
             <button

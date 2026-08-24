@@ -69,11 +69,11 @@ export default function Home() {
     <main>
       {/* ========== HERO SECTION ========== */}
       <section
-        className="relative min-h-screen flex items-center"
+        className="relative min-h-[80vh] md:min-h-screen flex items-center"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-brand-dark via-brand-navy to-brand-darker" />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-40">
           <div className="max-w-3xl fade-in">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white font-display leading-tight mb-6">
               Your Brand. Our Creativity.{" "}

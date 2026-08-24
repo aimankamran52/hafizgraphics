@@ -16,18 +16,24 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
   font-family: var(--font-body);
   color: #333;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a, button, [role="button"], input, select, textarea {
+  touch-action: manipulation;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -45,11 +51,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .whatsapp-float {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 9999;
-  width: 60px;
-  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 40;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background-color: #25D366;
   display: flex;
@@ -58,6 +64,15 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .whatsapp-float {
+    bottom: 24px;
+    right: 24px;
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .whatsapp-float:hover {
@@ -79,4 +94,12 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

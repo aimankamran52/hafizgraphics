@@ -33,7 +33,7 @@ const Catalogue = () => {
   return (
     <main>
       {/* HERO BANNER */}
-      <section className="relative bg-brand-dark py-28 md:py-36">
+      <section className="relative bg-brand-dark py-16 md:py-36">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-dark via-brand-navy to-brand-darker" />
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Product Catalogue</h1>

@@ -35,7 +35,7 @@ export default function Contact() {
   return (
     <main>
       {/* ========== HERO BANNER ========== */}
-      <section className="relative bg-brand-dark py-24 md:py-32">
+      <section className="relative bg-brand-dark py-16 md:py-32">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-dark via-brand-dark/95 to-brand-dark/80" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white font-display mb-3">

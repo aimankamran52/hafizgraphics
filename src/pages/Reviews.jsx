@@ -84,7 +84,7 @@ function Reviews() {
   return (
     <main>
       {/* Hero Banner */}
-      <section className="relative bg-brand-dark py-24 overflow-hidden">
+      <section className="relative bg-brand-dark py-16 md:py-24 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(200,169,81,0.3) 1px, transparent 0)', backgroundSize: '40px 40px' }} />
         </div>
@@ -96,7 +96,7 @@ function Reviews() {
               <li className="text-brand-gold">Reviews</li>
             </ol>
           </nav>
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="font-display text-3xl md:text-6xl font-bold text-white mb-6">
             Customer Reviews
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">

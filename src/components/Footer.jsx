@@ -41,8 +41,8 @@ const quickLinks = [
 export default function Footer() {
   return (
     <footer className="bg-brand-dark text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
           {/* Company Info */}
           <div>
             <Link to="/" className="inline-block">
@@ -59,12 +59,12 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-1">
               {quickLinks.map((link) => (
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="text-gray-400 hover:text-brand-gold transition-colors text-sm"
+                    className="text-gray-400 hover:text-brand-gold transition-colors text-sm inline-block py-1.5"
                   >
                     {link.label}
                   </Link>
@@ -76,11 +76,11 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               <li>
                 <a
                   href={`tel:${PHONE_NUMBER.replace(/\s/g, "")}`}
-                  className="flex items-center gap-2 text-gray-400 hover:text-brand-gold transition-colors text-sm"
+                  className="flex items-center gap-2 text-gray-400 hover:text-brand-gold transition-colors text-sm py-1.5"
                 >
                   <Phone size={16} />
                   {PHONE_NUMBER}
@@ -91,7 +91,7 @@ export default function Footer() {
                   href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-400 hover:text-brand-gold transition-colors text-sm"
+                  className="flex items-center gap-2 text-gray-400 hover:text-brand-gold transition-colors text-sm py-1.5"
                 >
                   <MessageCircle size={16} />
                   WhatsApp Us
@@ -100,7 +100,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`mailto:${EMAIL}`}
-                  className="flex items-center gap-2 text-gray-400 hover:text-brand-gold transition-colors text-sm"
+                  className="flex items-center gap-2 text-gray-400 hover:text-brand-gold transition-colors text-sm py-1.5"
                 >
                   <Mail size={16} />
                   {EMAIL}

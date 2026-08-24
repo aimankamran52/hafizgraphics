@@ -87,23 +87,7 @@ export default function ProductDetail() {
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-          {/* Product Image */}
-          <div className="relative">
-            <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-brand-dark to-brand-navy shadow-lg flex items-center justify-center">
-              <div className="text-center">
-                <span className="text-6xl font-display font-bold text-brand-gold/30">{product.name.charAt(0)}</span>
-                <p className="text-white/40 mt-2 text-sm">{product.name}</p>
-              </div>
-            </div>
-            {product.featured && (
-              <div className="absolute top-4 left-4 bg-brand-gold text-white px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1">
-                <Star className="w-4 h-4" />
-                Featured
-              </div>
-            )}
-          </div>
-
+        <div className="max-w-3xl">
           {/* Product Info */}
           <div className="flex flex-col">
             {category && (
@@ -157,52 +141,52 @@ export default function ProductDetail() {
       </section>
 
       {/* Specifications */}
-      {product.specs && Object.keys(product.specs).length > 0 && (
+      {product.specifications && Object.keys(product.specifications).length > 0 && (
         <section className="container mx-auto px-4 py-8">
           <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm">
             <h2 className="text-2xl font-display font-bold text-brand-dark mb-6">Specifications</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {product.specs.size && (
+              {product.specifications.size && (
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Ruler className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Size</p>
-                    <p className="font-medium text-brand-dark">{product.specs.size}</p>
+                    <p className="font-medium text-brand-dark">{product.specifications.size}</p>
                   </div>
                 </div>
               )}
-              {product.specs.paper && (
+              {product.specifications.paper && (
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Layers className="w-5 h-5 text-green-600" />
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Paper / Material</p>
-                    <p className="font-medium text-brand-dark">{product.specs.paper}</p>
+                    <p className="font-medium text-brand-dark">{product.specifications.paper}</p>
                   </div>
                 </div>
               )}
-              {product.specs.printing && (
+              {product.specifications.printing && (
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Printer className="w-5 h-5 text-orange-600" />
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Printing</p>
-                    <p className="font-medium text-brand-dark">{product.specs.printing}</p>
+                    <p className="font-medium text-brand-dark">{product.specifications.printing}</p>
                   </div>
                 </div>
               )}
-              {product.specs.finish && (
+              {product.specifications.finish && (
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 bg-purple-50 rounded-lg flex items-center justify-center flex-shrink-0">
                     <FileText className="w-5 h-5 text-purple-600" />
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Finish</p>
-                    <p className="font-medium text-brand-dark">{product.specs.finish}</p>
+                    <p className="font-medium text-brand-dark">{product.specifications.finish}</p>
                   </div>
                 </div>
               )}
