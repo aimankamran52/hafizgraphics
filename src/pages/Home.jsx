@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import SectionTitle from "../components/SectionTitle";
-import ProductCard from "../components/ProductCard";
-import { categories, products } from "../data/products";
 import { stats, WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from "../data/siteInfo";
 import {
   ArrowRight,
@@ -11,8 +9,8 @@ import {
   Truck,
   Users,
   ChevronRight,
-  Package,
   MessageCircle,
+  Check,
 } from "lucide-react";
 
 const features = [
@@ -63,14 +61,10 @@ const testimonials = [
 const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 export default function Home() {
-  const featuredProducts = products.filter((p) => p.featured).slice(0, 8);
-
   return (
     <main>
       {/* ========== HERO SECTION ========== */}
-      <section
-        className="relative min-h-[80vh] md:min-h-screen flex items-center"
-      >
+      <section className="relative min-h-[80vh] md:min-h-screen flex items-center">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-dark via-brand-navy to-brand-darker" />
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-40">
@@ -122,23 +116,25 @@ export default function Home() {
             title="Why Hafiz Graphics"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
                 <div
                   key={index}
-                  className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                  className="group flex items-start gap-5 p-6 rounded-2xl border border-gray-100 hover:border-brand-gold/30 hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-white to-gray-50/50"
                 >
-                  <div className="w-12 h-12 rounded-full bg-brand-gold/10 flex items-center justify-center mb-4">
-                    <Icon size={24} className="text-brand-gold" />
+                  <div className="w-14 h-14 rounded-2xl bg-brand-gold/10 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-gold group-hover:scale-105 transition-all duration-300">
+                    <Icon size={26} className="text-brand-gold group-hover:text-white transition-colors" />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-500 leading-relaxed text-sm">
-                    {feature.description}
-                  </p>
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-1.5">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-500 leading-relaxed text-sm">
+                      {feature.description}
+                    </p>
+                  </div>
                 </div>
               );
             })}
@@ -146,77 +142,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ========== FEATURED PRODUCTS ========== */}
-      <section className="py-20 md:py-32 bg-brand-light">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle subtitle="Our Products" title="Featured Products" />
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              to="/products"
-              className="inline-flex items-center gap-2 bg-brand-gold text-brand-dark px-8 py-3 rounded-lg font-semibold hover:bg-brand-gold/90 transition-colors"
-            >
-              View All Products
-              <ArrowRight size={18} />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ========== PRODUCT CATEGORIES ========== */}
-      <section className="py-20 md:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle
-            subtitle="Browse by Category"
-            title="Our Product Categories"
-          />
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {categories.map((category) => {
-              const productCount = products.filter(
-                (p) => p.categoryId === category.id
-              ).length;
-              return (
-                <Link
-                  key={category.id}
-                  to={`/products/${category.slug}`}
-                  className="group relative rounded-xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-brand-dark to-brand-navy flex flex-col items-center justify-center p-6 text-center hover:from-brand-gold/20 hover:to-brand-gold/10 transition-all duration-300 border border-gray-100 hover:border-brand-gold/30"
-                >
-                  <div className="w-14 h-14 rounded-full bg-brand-gold/10 flex items-center justify-center mb-3 group-hover:bg-brand-gold/20 transition-colors">
-                    <Package size={28} className="text-brand-gold" />
-                  </div>
-                  <h3 className="text-white font-semibold text-sm md:text-base">
-                    {category.name}
-                  </h3>
-                  <p className="text-gray-300 text-xs mt-1">
-                    {productCount} Products
-                  </p>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* ========== TESTIMONIALS ========== */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-20 md:py-32 bg-brand-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             subtitle="Testimonials"
             title="What Our Customers Say"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-gray-50 p-8 rounded-xl border border-gray-100"
+                className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="mb-4">
                   <svg
@@ -228,7 +166,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <p className="text-gray-600 leading-relaxed mb-6 italic">
-                  {testimonial.text}
+                  "{testimonial.text}"
                 </p>
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -253,7 +191,7 @@ export default function Home() {
 
           <div className="text-center mt-10">
             <Link
-              to="/about"
+              to="/reviews"
               className="inline-flex items-center gap-2 text-brand-gold font-semibold hover:underline"
             >
               Read More Reviews
