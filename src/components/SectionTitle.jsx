@@ -5,23 +5,18 @@ export default function SectionTitle({
   centered = true,
 }) {
   return (
-    <div className={`mb-12 ${centered ? "text-center" : ""}`}>
-      <div
-        className={`w-12 h-1 bg-brand-gold rounded mb-4 ${
-          centered ? "mx-auto" : ""
-        }`}
-      />
+    <div className={`mb-10 ${centered ? "text-center" : ""}`}>
       {subtitle && (
-        <p className="text-brand-gold font-semibold text-sm uppercase tracking-widest mb-2">
+        <p className="text-brand-gold font-semibold text-xs uppercase tracking-[0.2em] mb-3">
           {subtitle}
         </p>
       )}
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-display">
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-display">
         {title}
       </h2>
       {description && (
         <p
-          className={`mt-3 text-gray-500 max-w-2xl leading-relaxed ${
+          className={`mt-3 text-gray-500 max-w-xl text-sm leading-relaxed ${
             centered ? "mx-auto" : ""
           }`}
         >

@@ -8,8 +8,8 @@
   --color-brand-darker: #0F0F1A;
   --color-brand-navy: #16213E;
   --color-brand-accent: #E94560;
-  --color-brand-light: #F8F9FA;
-  --color-brand-gray: #6C757D;
+  --color-brand-light: #FAFAFA;
+  --color-brand-gray: #6B7280;
   --font-display: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
 }
@@ -21,9 +21,11 @@ html {
 
 body {
   font-family: var(--font-body);
-  color: #333;
-  background-color: #fff;
+  color: #1a1a2e;
+  background-color: #ffffff;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
@@ -38,14 +40,16 @@ a, button, [role="button"], input, select, textarea {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .fade-in {
-  animation: fadeIn 0.6s ease-in;
+  animation: fadeIn 0.5s ease-out;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
@@ -54,15 +58,15 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 20px;
   right: 20px;
   z-index: 40;
-  width: 56px;
-  height: 56px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   background-color: #25D366;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
 }
 
@@ -70,23 +74,14 @@ h1, h2, h3, h4, h5, h6 {
   .whatsapp-float {
     bottom: 24px;
     right: 24px;
-    width: 60px;
-    height: 60px;
+    width: 56px;
+    height: 56px;
   }
 }
 
 .whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-}
-
-.product-card-hover {
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.product-card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+  transform: scale(1.08);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
 }
 
 .gradient-text {

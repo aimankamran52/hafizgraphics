@@ -7,7 +7,7 @@ const navLinks = [
   { to: "/", label: "Home" },
   { to: "/products", label: "Products" },
   { to: "/catalogue", label: "Catalogue" },
-  { to: "/about", label: "About Us" },
+  { to: "/about", label: "About" },
   { to: "/reviews", label: "Reviews" },
   { to: "/contact", label: "Contact" },
 ];
@@ -31,7 +31,7 @@ export default function Header() {
   }, [mobileOpen]);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
+    const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -39,23 +39,20 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300 ${
-          scrolled ? "shadow-lg" : ""
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled
+            ? "bg-white/95 backdrop-blur-md border-b border-gray-100"
+            : "bg-white"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 sm:h-20">
-            {/* Logo */}
-            <Link to="/" className="flex flex-col min-w-0">
-              <span className="text-xl sm:text-2xl font-bold gradient-text font-display tracking-wide">
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <Link to="/" className="flex items-center gap-2">
+              <span className="text-lg font-bold gradient-text font-display tracking-wide">
                 HAFIZ GRAPHICS
-              </span>
-              <span className="text-[9px] sm:text-xs text-gray-500 tracking-widest uppercase hidden sm:block">
-                Graphic Designing | Printing | Branding
               </span>
             </Link>
 
-            {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-1">
               {navLinks.map((link) => (
                 <NavLink
@@ -63,10 +60,10 @@ export default function Header() {
                   to={link.to}
                   end={link.to === "/"}
                   className={({ isActive }) =>
-                    `px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    `px-3.5 py-2 text-sm font-medium transition-colors rounded-md ${
                       isActive
-                        ? "text-brand-gold bg-brand-gold/10"
-                        : "text-gray-700 hover:text-brand-gold"
+                        ? "text-brand-gold"
+                        : "text-gray-500 hover:text-gray-900"
                     }`
                   }
                 >
@@ -75,32 +72,30 @@ export default function Header() {
               ))}
             </nav>
 
-            {/* Desktop Right */}
-            <div className="hidden lg:flex items-center gap-4">
+            <div className="hidden lg:flex items-center gap-3">
               <a
                 href={`tel:${PHONE_NUMBER.replace(/\s/g, "")}`}
-                className="flex items-center gap-1.5 text-sm text-gray-600 hover:text-brand-gold transition-colors"
+                className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900 transition-colors"
               >
-                <Phone size={16} />
+                <Phone size={14} />
                 <span>{PHONE_NUMBER}</span>
               </a>
               <a
                 href={`https://wa.me/${WHATSAPP_NUMBER}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-2.5 bg-brand-gold text-brand-dark font-semibold rounded-lg hover:bg-brand-gold/90 transition-colors text-sm"
+                className="px-5 py-2 bg-brand-gold text-white text-sm font-semibold rounded-full hover:bg-brand-gold-dark transition-colors"
               >
                 Get a Quote
               </a>
             </div>
 
-            {/* Mobile Toggle */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-3 -mr-2 text-gray-700 hover:text-brand-gold transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+              className="lg:hidden p-2 -mr-2 text-gray-700 min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Toggle menu"
             >
-              {mobileOpen ? <X size={26} /> : <Menu size={26} />}
+              {mobileOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
         </div>
@@ -108,7 +103,7 @@ export default function Header() {
 
       {/* Mobile Overlay */}
       <div
-        className={`fixed inset-0 bg-black/50 z-[60] transition-opacity duration-300 lg:hidden ${
+        className={`fixed inset-0 bg-black/30 z-[60] transition-opacity duration-200 lg:hidden ${
           mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setMobileOpen(false)}
@@ -116,35 +111,35 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-y-0 right-0 w-72 max-w-[85vw] bg-white shadow-2xl z-[70] transform transition-transform duration-300 ease-in-out lg:hidden ${
-          mobileOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed inset-y-0 left-0 w-72 max-w-[80vw] bg-white z-[70] transform transition-transform duration-200 ease-out lg:hidden ${
+          mobileOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="flex flex-col h-full">
-          <div className="flex items-center justify-between p-4 border-b">
-            <span className="text-lg font-bold gradient-text font-display">
+          <div className="flex items-center justify-between px-5 h-16 border-b border-gray-100">
+            <span className="text-base font-bold gradient-text font-display">
               HAFIZ GRAPHICS
             </span>
             <button
               onClick={() => setMobileOpen(false)}
-              className="p-2 text-gray-700 hover:text-brand-gold min-w-[44px] min-h-[44px] flex items-center justify-center"
+              className="p-2 text-gray-500 min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Close menu"
             >
-              <X size={24} />
+              <X size={20} />
             </button>
           </div>
 
-          <nav className="flex-1 flex flex-col p-4 gap-1 overflow-y-auto">
+          <nav className="flex-1 flex flex-col py-4 px-3 gap-0.5 overflow-y-auto">
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}
                 to={link.to}
                 end={link.to === "/"}
                 className={({ isActive }) =>
-                  `px-4 py-3.5 rounded-lg text-base font-medium transition-colors min-h-[44px] flex items-center ${
+                  `px-4 py-3 rounded-lg text-sm font-medium transition-colors min-h-[44px] flex items-center ${
                     isActive
-                      ? "text-brand-gold bg-brand-gold/10"
-                      : "text-gray-700 hover:text-brand-gold hover:bg-gray-50"
+                      ? "text-brand-gold bg-brand-gold/5"
+                      : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
                   }`
                 }
               >
@@ -153,19 +148,19 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="p-4 border-t space-y-3">
+          <div className="px-5 py-5 border-t border-gray-100 space-y-3">
             <a
               href={`tel:${PHONE_NUMBER.replace(/\s/g, "")}`}
-              className="flex items-center gap-2 text-sm text-gray-600 min-h-[44px]"
+              className="flex items-center gap-2 text-sm text-gray-500 min-h-[44px]"
             >
-              <Phone size={16} />
+              <Phone size={14} />
               {PHONE_NUMBER}
             </a>
             <a
               href={`https://wa.me/${WHATSAPP_NUMBER}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-center px-5 py-3 bg-brand-gold text-brand-dark font-semibold rounded-lg hover:bg-brand-gold/90 transition-colors min-h-[44px] flex items-center justify-center"
+              className="block text-center px-5 py-3 bg-brand-gold text-white font-semibold rounded-full text-sm min-h-[44px] flex items-center justify-center"
             >
               Get a Quote
             </a>

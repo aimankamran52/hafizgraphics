@@ -1,42 +1,27 @@
 import { Link } from "react-router-dom";
-import SectionTitle from "../components/SectionTitle";
-import { stats, WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from "../data/siteInfo";
-import {
-  ArrowRight,
-  Star,
-  Shield,
-  Palette,
-  Truck,
-  Users,
-  ChevronRight,
-  MessageCircle,
-  Check,
-} from "lucide-react";
+import { stats } from "../data/siteInfo";
+import { ArrowRight, Shield, Palette, Truck, Users, Star, Quote } from "lucide-react";
 
 const features = [
   {
     icon: Shield,
     title: "Professional Quality",
-    description:
-      "High-quality design and printing that represents your brand professionally.",
+    description: "High-quality design and printing that represents your brand professionally.",
   },
   {
     icon: Palette,
     title: "Complete Branding",
-    description:
-      "From design to print — all your branding needs in one place.",
+    description: "From design to print — all your branding needs in one place.",
   },
   {
     icon: Truck,
-    title: "Reliable Service",
-    description:
-      "Timely delivery and professional communication every time.",
+    title: "Reliable Delivery",
+    description: "Timely delivery and professional communication every time.",
   },
   {
     icon: Users,
     title: "Corporate Solutions",
-    description:
-      "Specialized printing solutions for businesses, schools and organizations.",
+    description: "Specialized printing for businesses, schools and organizations.",
   },
 ];
 
@@ -44,63 +29,63 @@ const testimonials = [
   {
     text: "Hum ne visiting cards banwaye aur bohat achi quality mili. Ab sari printing yahan se karwata hoon. Highly recommended!",
     name: "Asif Mehmood",
-    designation: "Owner, Al-Rehman Traders",
+    role: "Owner, Al-Rehman Traders",
   },
   {
     text: "We needed 2000 file folders urgently. They finished in 3 days with excellent quality. Really professional team.",
     name: "Dr. Ayesha Siddiqui",
-    designation: "COO, City Medical Centre",
+    role: "COO, City Medical Centre",
   },
   {
     text: "For 18 months all our office stationery has been handled by them. Consistent quality and never missed a deadline.",
     name: "Faisal Naveed",
-    designation: "Director Admin, Pak Systems",
+    role: "Director Admin, Pak Systems",
   },
 ];
-
-const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 export default function Home() {
   return (
     <main>
-      {/* ========== HERO SECTION ========== */}
-      <section className="relative min-h-[80vh] md:min-h-screen flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-dark via-brand-navy to-brand-darker" />
+      {/* Hero */}
+      <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center bg-gradient-to-br from-brand-dark via-brand-navy to-brand-darker">
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, rgba(200,169,81,0.5) 1px, transparent 0)", backgroundSize: "32px 32px" }} />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-40">
-          <div className="max-w-3xl fade-in">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white font-display leading-tight mb-6">
-              Your Brand. Our Creativity.{" "}
-              <span className="text-brand-gold">Printed to Perfection.</span>
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-32 md:py-40">
+          <div className="max-w-2xl fade-in">
+            <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em] mb-5">
+              Graphic Designing & Printing
+            </p>
+            <h1 className="text-4xl sm:text-5xl md:text-[3.5rem] font-bold text-white font-display leading-[1.1] mb-6">
+              Your Brand, Our Creativity.
+              <span className="block text-brand-gold mt-1">Printed to Perfection.</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-10 max-w-2xl">
-              Professional graphic designing, printing and branding solutions in Pakistan.
+            <p className="text-base md:text-lg text-gray-400 leading-relaxed mb-10 max-w-lg">
+              Professional printing and branding solutions for businesses across Pakistan.
             </p>
 
-            <div className="flex flex-wrap gap-4 mb-16">
+            <div className="flex flex-wrap gap-3 mb-16">
               <Link
                 to="/products"
-                className="inline-flex items-center gap-2 bg-brand-gold text-brand-dark px-8 py-3.5 rounded-lg font-semibold hover:bg-brand-gold/90 transition-colors"
+                className="inline-flex items-center gap-2 bg-brand-gold text-white px-7 py-3 rounded-full font-semibold text-sm hover:bg-brand-gold-dark transition-colors"
               >
                 View Products
-                <ArrowRight size={18} />
+                <ArrowRight size={16} />
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-white hover:text-brand-dark transition-colors"
+                className="inline-flex items-center gap-2 border border-white/20 text-white px-7 py-3 rounded-full font-semibold text-sm hover:bg-white/10 transition-colors"
               >
                 Get a Quote
-                <ChevronRight size={18} />
               </Link>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center md:text-left">
-                  <p className="text-3xl md:text-4xl font-bold text-brand-gold font-display">
+                <div key={index}>
+                  <p className="text-2xl md:text-3xl font-bold text-white font-display">
                     {stat.value}
                   </p>
-                  <p className="text-sm text-gray-300 mt-1">{stat.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 uppercase tracking-wider">{stat.label}</p>
                 </div>
               ))}
             </div>
@@ -108,32 +93,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ========== WHY HAFIZ GRAPHICS ========== */}
-      <section className="py-20 md:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle
-            subtitle="Why Choose Us"
-            title="Why Hafiz Graphics"
-          />
+      {/* Why Us */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.2em] mb-3">Why Choose Us</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-display">Why Hafiz Graphics</h2>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
                 <div
                   key={index}
-                  className="group flex items-start gap-5 p-6 rounded-2xl border border-gray-100 hover:border-brand-gold/30 hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-white to-gray-50/50"
+                  className="flex items-start gap-4 p-5 rounded-xl border border-gray-100 hover:border-gray-200 transition-colors"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-brand-gold/10 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-gold group-hover:scale-105 transition-all duration-300">
-                    <Icon size={26} className="text-brand-gold group-hover:text-white transition-colors" />
+                  <div className="w-10 h-10 rounded-lg bg-brand-gold/10 flex items-center justify-center flex-shrink-0">
+                    <Icon size={20} className="text-brand-gold" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-1.5">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-500 leading-relaxed text-sm">
-                      {feature.description}
-                    </p>
+                    <h3 className="text-sm font-bold text-gray-900 mb-1">{feature.title}</h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
                   </div>
                 </div>
               );
@@ -142,48 +123,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ========== TESTIMONIALS ========== */}
-      <section className="py-20 md:py-32 bg-brand-light">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle
-            subtitle="Testimonials"
-            title="What Our Customers Say"
-          />
+      {/* Testimonials */}
+      <section className="py-20 md:py-28 bg-brand-light">
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.2em] mb-3">Testimonials</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-display">What Our Customers Say</h2>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
-              >
-                <div className="mb-4">
-                  <svg
-                    className="w-8 h-8 text-brand-gold/30"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                  </svg>
-                </div>
-                <p className="text-gray-600 leading-relaxed mb-6 italic">
-                  "{testimonial.text}"
-                </p>
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      className="fill-brand-gold text-brand-gold"
-                    />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {testimonials.map((t, i) => (
+              <div key={i} className="bg-white p-6 rounded-xl border border-gray-100">
+                <Quote size={20} className="text-brand-gold/30 mb-3" />
+                <p className="text-gray-600 text-sm leading-relaxed mb-5 italic">"{t.text}"</p>
+                <div className="flex gap-0.5 mb-4">
+                  {[...Array(5)].map((_, j) => (
+                    <Star key={j} size={13} className="fill-brand-gold text-brand-gold" />
                   ))}
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900">
-                    {testimonial.name}
-                  </p>
-                  <p className="text-sm text-gray-500">
-                    {testimonial.designation}
-                  </p>
+                  <p className="text-sm font-semibold text-gray-900">{t.name}</p>
+                  <p className="text-xs text-gray-400">{t.role}</p>
                 </div>
               </div>
             ))}
@@ -192,15 +152,13 @@ export default function Home() {
           <div className="text-center mt-10">
             <Link
               to="/reviews"
-              className="inline-flex items-center gap-2 text-brand-gold font-semibold hover:underline"
+              className="inline-flex items-center gap-1.5 text-brand-gold text-sm font-semibold hover:underline"
             >
-              Read More Reviews
-              <ArrowRight size={16} />
+              Read More Reviews <ArrowRight size={14} />
             </Link>
           </div>
         </div>
       </section>
-
     </main>
   );
 }
