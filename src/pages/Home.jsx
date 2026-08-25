@@ -1,29 +1,6 @@
 import { Link } from "react-router-dom";
 import { stats, PHONE_NUMBER, WHATSAPP_NUMBER, WHATSAPP_MESSAGE, EMAIL, ADDRESS } from "../data/siteInfo";
-import { ArrowRight, Shield, Palette, Truck, Users, Star, Quote, Phone, MessageCircle, Mail, MapPin } from "lucide-react";
-
-const features = [
-  {
-    icon: Shield,
-    title: "Professional Quality",
-    description: "High-quality design and printing for your brand.",
-  },
-  {
-    icon: Palette,
-    title: "Complete Branding",
-    description: "From design to print — all branding needs in one place.",
-  },
-  {
-    icon: Truck,
-    title: "Reliable Delivery",
-    description: "Timely delivery and professional communication.",
-  },
-  {
-    icon: Users,
-    title: "Corporate Solutions",
-    description: "Specialized printing for businesses and organizations.",
-  },
-];
+import { ArrowRight, Star, Quote, Phone, MessageCircle, Mail, MapPin } from "lucide-react";
 
 const testimonials = [
   {
@@ -133,36 +110,6 @@ export default function Home() {
                 <p className="text-sm font-semibold text-gray-900">{ADDRESS}</p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Us */}
-      <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
-          <div className="text-center mb-14">
-            <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.2em] mb-3">Why Choose Us</p>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-display">Why Hafiz Graphics</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div
-                  key={index}
-                  className="flex items-start gap-4 p-5 rounded-xl border border-gray-100 hover:border-gray-200 transition-colors"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-brand-gold/10 flex items-center justify-center flex-shrink-0">
-                    <Icon size={20} className="text-brand-gold" />
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-bold text-gray-900 mb-1">{feature.title}</h3>
-                    <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
-                  </div>
-                </div>
-              );
-            })}
           </div>
         </div>
       </section>
