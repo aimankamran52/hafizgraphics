@@ -147,8 +147,8 @@ export default function Products() {
 
         {/* Category Overview — only when All + no search */}
         {activeCategory === 'all' && !searchQuery && (
-          <div className="pt-8 pb-2">
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+          <div className="pt-10 pb-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
               {categories.map(category => {
                 const count = getProductsByCategory(category.slug).length
                 return (
@@ -172,7 +172,7 @@ export default function Products() {
         )}
 
         {/* Section Header */}
-        <div className="flex items-center justify-between pt-8 pb-5">
+        <div className="flex items-center justify-between pt-10 pb-6">
           <h2 className="text-lg font-display font-bold text-gray-900">
             {activeCategory === 'all' ? 'All Products' : activeCategoryData?.name || 'Products'}
           </h2>
