@@ -112,7 +112,7 @@ export default function Products() {
 
       <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-8">
         {/* Search */}
-        <div className="max-w-sm mb-6 md:mb-8">
+        <div className="max-w-sm mb-6 md:mb-8 ml-auto">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
             <input

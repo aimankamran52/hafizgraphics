@@ -181,7 +181,7 @@ export const products = [
     slug: "folders",
     categoryId: "cat-1",
     shortDescription: "Custom presentation folders for professional document organization.",
-    image: "https://images.unsplash.com/photo-1568234928966-433737035531?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1762427354605-ac241af2b102?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "A4 (holds A4 documents)",
       paper: "300 GSM Card Stock",
@@ -281,7 +281,7 @@ export const products = [
     slug: "posters-marketing",
     categoryId: "cat-2",
     shortDescription: "Large, impactful posters for advertising and promotional displays.",
-    image: "https://images.unsplash.com/photo-1579762715118-a6f1d789a1a6?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1763256552751-db613582fb2c?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "A3 / A2",
       paper: "150 GSM Art Paper",
@@ -381,7 +381,7 @@ export const products = [
     slug: "vinyl-printing",
     categoryId: "cat-3",
     shortDescription: "",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1503694978374-8a2fa686963a?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Custom (as per requirement)",
       paper: "Premium Vinyl (Indoor / Outdoor grade)",
@@ -529,7 +529,7 @@ export const products = [
     slug: "food-boxes",
     categoryId: "cat-4",
     shortDescription: "Custom food-grade packaging boxes for restaurants and food businesses.",
-    image: "https://images.unsplash.com/photo-1555507036-ab1f4159b806?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1652862729869-2f4e80c1849d?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Custom (various food-grade sizes)",
       paper: "Food-Grade Cardboard / Corrugated",
@@ -545,7 +545,7 @@ export const products = [
     slug: "cake-boxes",
     categoryId: "cat-4",
     shortDescription: "Premium cake boxes for bakeries and confectionery businesses.",
-    image: "https://images.unsplash.com/photo-1562577309-9e66f0c65ce5?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1771016834009-bda415d14c64?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Custom (various cake sizes)",
       paper: "350 GSM Food-Grade Cardboard",
@@ -761,7 +761,7 @@ export const products = [
     slug: "caps",
     categoryId: "cat-6",
     shortDescription: "Custom branded caps with embroidery and print options.",
-    image: "https://images.unsplash.com/photo-1588850561407-ed78c334e67a?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1620327467532-6ebaca6273ed?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Adjustable / Fitted",
       paper: "Cotton / Polyester / Mesh",
