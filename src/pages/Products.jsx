@@ -57,82 +57,94 @@ export default function Products() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-brand-dark py-10 md:py-16">
+      <section className="bg-brand-dark py-10 md:py-14">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
-          <h1 className="text-2xl sm:text-3xl md:text-[2.5rem] font-display font-bold text-white mb-2">
+          <h1 className="text-2xl sm:text-3xl md:text-[2.25rem] font-display font-bold text-white mb-1.5">
             Our Products
           </h1>
-          <p className="text-gray-400 text-sm mb-5">
+          <p className="text-gray-400 text-sm">
             Printing, designing, branding and promotional solutions
           </p>
-          <nav className="flex items-center gap-1.5 text-xs text-gray-500 flex-wrap">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3" />
-            <span className="text-gray-300">Products</span>
-            {activeCategoryData && (
-              <>
-                <ChevronRight className="w-3 h-3" />
-                <span className="text-brand-gold">{activeCategoryData.name}</span>
-              </>
-            )}
-          </nav>
         </div>
       </section>
 
-      {/* Tabs */}
+      {/* Sticky Tabs + Search Bar */}
       <section className="bg-white border-b border-gray-100 sticky top-[60px] lg:top-[68px] z-40">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
-          <div className="flex items-center gap-1 overflow-x-auto py-3 scrollbar-hide">
-            <button
-              onClick={() => handleCategoryChange('all')}
-              className={`flex-shrink-0 px-4 py-2 rounded-full text-[12px] font-semibold transition-all duration-200 ${
-                activeCategory === 'all'
-                  ? 'bg-brand-dark text-white shadow-sm'
-                  : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
-              }`}
-            >
-              All
-            </button>
-            {categories.map(category => (
+          <div className="flex items-center gap-3 py-3">
+            {/* Category Tabs */}
+            <div className="flex items-center gap-1 overflow-x-auto scrollbar-hide flex-1 min-w-0">
               <button
-                key={category.slug}
-                onClick={() => handleCategoryChange(category.slug)}
-                className={`flex-shrink-0 px-4 py-2 rounded-full text-[12px] font-semibold transition-all duration-200 whitespace-nowrap ${
-                  activeCategory === category.slug
+                onClick={() => handleCategoryChange('all')}
+                className={`flex-shrink-0 px-4 py-2 rounded-full text-[12px] font-semibold transition-all duration-200 ${
+                  activeCategory === 'all'
                     ? 'bg-brand-dark text-white shadow-sm'
                     : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
                 }`}
               >
-                {category.name}
+                All
               </button>
-            ))}
+              {categories.map(category => (
+                <button
+                  key={category.slug}
+                  onClick={() => handleCategoryChange(category.slug)}
+                  className={`flex-shrink-0 px-4 py-2 rounded-full text-[12px] font-semibold transition-all duration-200 whitespace-nowrap ${
+                    activeCategory === category.slug
+                      ? 'bg-brand-dark text-white shadow-sm'
+                      : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
+                  }`}
+                >
+                  {category.name}
+                </button>
+              ))}
+            </div>
+
+            {/* Search — inside the bar */}
+            <div className="flex-shrink-0 relative hidden sm:block">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
+              <input
+                type="text"
+                placeholder="Search..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-48 pl-9 pr-8 py-2 border border-gray-200/80 rounded-lg text-[13px] focus:ring-2 focus:ring-brand-gold/20 focus:border-brand-gold outline-none transition-all bg-gray-50/50 focus:bg-white"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-300 hover:text-gray-500"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
           </div>
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 py-8 md:py-10">
-        {/* Search */}
-        <div className="max-w-xs mb-7 md:mb-9 ml-auto">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
-            <input
-              type="text"
-              placeholder="Search products..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-9 py-2.5 border border-gray-200/80 rounded-xl text-[13px] focus:ring-2 focus:ring-brand-gold/20 focus:border-brand-gold outline-none transition-all bg-gray-50/50 focus:bg-white"
-            />
-            {searchQuery && (
-              <button
-                onClick={() => setSearchQuery('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-300 hover:text-gray-500"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            )}
-          </div>
+      {/* Mobile Search — visible only on small screens */}
+      <div className="sm:hidden max-w-7xl mx-auto px-5 pt-4">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
+          <input
+            type="text"
+            placeholder="Search products..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full pl-9 pr-9 py-2.5 border border-gray-200/80 rounded-xl text-[13px] focus:ring-2 focus:ring-brand-gold/20 focus:border-brand-gold outline-none transition-all bg-gray-50/50 focus:bg-white"
+          />
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery('')}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-300 hover:text-gray-500"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          )}
         </div>
+      </div>
 
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 py-8 md:py-10">
         {/* Category overview */}
         {activeCategory === 'all' && !searchQuery && (
           <div className="mb-10">
