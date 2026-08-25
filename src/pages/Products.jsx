@@ -57,21 +57,21 @@ export default function Products() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-brand-dark py-8 md:py-14">
+      <section className="bg-brand-dark py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white mb-2">
+          <h1 className="text-2xl sm:text-3xl md:text-[2.5rem] font-display font-bold text-white mb-2">
             Our Products
           </h1>
-          <p className="text-gray-400 text-sm mb-4">
+          <p className="text-gray-400 text-sm mb-5">
             Printing, designing, branding and promotional solutions
           </p>
           <nav className="flex items-center gap-1.5 text-xs text-gray-500 flex-wrap">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <ChevronRight className="w-3.5 h-3.5" />
+            <ChevronRight className="w-3 h-3" />
             <span className="text-gray-300">Products</span>
             {activeCategoryData && (
               <>
-                <ChevronRight className="w-3.5 h-3.5" />
+                <ChevronRight className="w-3 h-3" />
                 <span className="text-brand-gold">{activeCategoryData.name}</span>
               </>
             )}
@@ -80,14 +80,14 @@ export default function Products() {
       </section>
 
       {/* Tabs */}
-      <section className="bg-white border-b border-gray-100 sticky top-16 z-40">
+      <section className="bg-white border-b border-gray-100 sticky top-[60px] lg:top-[68px] z-40">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
           <div className="flex items-center gap-1 overflow-x-auto py-3 scrollbar-hide">
             <button
               onClick={() => handleCategoryChange('all')}
-              className={`flex-shrink-0 px-4 py-1.5 rounded-full text-xs font-medium transition-all ${
+              className={`flex-shrink-0 px-4 py-2 rounded-full text-[12px] font-semibold transition-all duration-200 ${
                 activeCategory === 'all'
-                  ? 'bg-brand-dark text-white'
+                  ? 'bg-brand-dark text-white shadow-sm'
                   : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
               }`}
             >
@@ -97,9 +97,9 @@ export default function Products() {
               <button
                 key={category.slug}
                 onClick={() => handleCategoryChange(category.slug)}
-                className={`flex-shrink-0 px-4 py-1.5 rounded-full text-xs font-medium transition-all whitespace-nowrap ${
+                className={`flex-shrink-0 px-4 py-2 rounded-full text-[12px] font-semibold transition-all duration-200 whitespace-nowrap ${
                   activeCategory === category.slug
-                    ? 'bg-brand-dark text-white'
+                    ? 'bg-brand-dark text-white shadow-sm'
                     : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
                 }`}
               >
@@ -110,9 +110,9 @@ export default function Products() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 py-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 py-8 md:py-10">
         {/* Search */}
-        <div className="max-w-sm mb-6 md:mb-8 ml-auto">
+        <div className="max-w-xs mb-7 md:mb-9 ml-auto">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
             <input
@@ -120,7 +120,7 @@ export default function Products() {
               placeholder="Search products..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-9 py-2.5 border border-gray-200 rounded-lg text-sm focus:ring-1 focus:ring-brand-gold focus:border-brand-gold outline-none transition-all bg-gray-50 focus:bg-white"
+              className="w-full pl-9 pr-9 py-2.5 border border-gray-200/80 rounded-xl text-[13px] focus:ring-2 focus:ring-brand-gold/20 focus:border-brand-gold outline-none transition-all bg-gray-50/50 focus:bg-white"
             />
             {searchQuery && (
               <button
@@ -133,23 +133,23 @@ export default function Products() {
           </div>
         </div>
 
-        {/* Category overview on 'all' */}
+        {/* Category overview */}
         {activeCategory === 'all' && !searchQuery && (
           <div className="mb-10">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
               {categories.map(category => {
                 const count = getProductsByCategory(category.slug).length
                 return (
                   <Link
                     key={category.slug}
                     to={`/products/category/${category.slug}`}
-                    className="group flex items-center justify-between p-4 rounded-xl border border-gray-100 hover:border-brand-gold/30 transition-colors"
+                    className="group flex items-center justify-between p-4 rounded-xl border border-gray-100 hover:border-brand-gold/30 hover:bg-brand-gold/[0.02] transition-all duration-200"
                   >
                     <div>
-                      <h3 className="text-sm font-semibold text-gray-900 group-hover:text-brand-gold transition-colors">
+                      <h3 className="text-[13px] font-semibold text-gray-900 group-hover:text-brand-gold transition-colors">
                         {category.name}
                       </h3>
-                      <p className="text-xs text-gray-400 mt-0.5">{count} products</p>
+                      <p className="text-[11px] text-gray-400 mt-0.5">{count} products</p>
                     </div>
                     <ChevronRight className="w-4 h-4 text-gray-300 group-hover:text-brand-gold transition-colors" />
                   </Link>
@@ -161,11 +161,11 @@ export default function Products() {
 
         {/* Products */}
         <div>
-          <div className="flex flex-wrap items-center justify-between gap-2 mb-5">
+          <div className="flex flex-wrap items-center justify-between gap-2 mb-6">
             <h2 className="text-lg font-display font-bold text-gray-900">
               {activeCategory === 'all' ? 'All Products' : activeCategoryData?.name || 'Products'}
             </h2>
-            <span className="text-xs text-gray-400">{filteredProducts.length} items</span>
+            <span className="text-[11px] text-gray-400 font-medium">{filteredProducts.length} items</span>
           </div>
 
           {filteredProducts.length > 0 ? (
@@ -175,13 +175,13 @@ export default function Products() {
               ))}
             </div>
           ) : (
-            <div className="text-center py-20">
+            <div className="text-center py-24">
               <Search className="w-10 h-10 text-gray-200 mx-auto mb-3" />
-              <h3 className="text-base font-semibold text-gray-700 mb-1">No products found</h3>
-              <p className="text-sm text-gray-400 mb-5">Try a different search or category.</p>
+              <h3 className="text-sm font-semibold text-gray-700 mb-1">No products found</h3>
+              <p className="text-[13px] text-gray-400 mb-5">Try a different search or category.</p>
               <button
                 onClick={() => { setSearchQuery(''); handleCategoryChange('all') }}
-                className="px-5 py-2 bg-brand-gold text-white text-sm rounded-lg hover:bg-brand-gold-dark transition-colors"
+                className="px-5 py-2.5 bg-brand-gold text-white text-[13px] font-semibold rounded-xl hover:bg-brand-gold-dark transition-colors"
               >
                 Clear Filters
               </button>

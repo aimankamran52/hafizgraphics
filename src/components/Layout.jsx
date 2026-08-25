@@ -14,12 +14,10 @@ export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 pt-16">
+      <main className="flex-1 pt-[60px] lg:pt-[68px]">
         <Outlet />
       </main>
-      <div className="pb-20 sm:pb-0">
-        <Footer />
-      </div>
+      <Footer />
       <WhatsAppButton />
     </div>
   );
