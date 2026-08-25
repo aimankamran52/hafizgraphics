@@ -7,24 +7,23 @@ export default function ProductCard({ product }) {
   )}`;
 
   return (
-    <div className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:border-gray-200/80 hover:shadow-[0_8px_30px_-12px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col">
+    <div className="group bg-white rounded-xl border border-gray-100 overflow-hidden hover:border-gray-200 hover:shadow-lg hover:shadow-gray-100/80 transition-all duration-300 flex flex-col">
       {product.image && (
-        <div className="relative h-[220px] overflow-hidden bg-gray-50">
+        <div className="relative aspect-[4/3] overflow-hidden bg-gray-50">
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out"
+            className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500 ease-out"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
       )}
-      <div className="p-5 flex flex-col flex-1">
-        <h3 className="text-[14px] font-semibold text-gray-900 mb-1 leading-snug">
+      <div className="p-4 flex flex-col flex-1">
+        <h3 className="text-[13px] font-semibold text-gray-900 leading-snug mb-1">
           {product.name}
         </h3>
         {product.shortDescription && (
-          <p className="text-[13px] text-gray-400 mb-5 line-clamp-1 flex-1 leading-relaxed">
+          <p className="text-[12px] text-gray-400 line-clamp-1 mb-4 flex-1 leading-relaxed">
             {product.shortDescription}
           </p>
         )}
@@ -32,9 +31,9 @@ export default function ProductCard({ product }) {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-auto inline-flex items-center justify-center gap-2 w-full py-2.5 border border-gray-200/80 rounded-xl text-[13px] font-medium text-gray-600 hover:border-brand-gold hover:text-brand-gold hover:bg-brand-gold/[0.02] transition-all duration-200"
+          className="mt-auto inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-lg text-[12px] font-semibold text-brand-gold bg-brand-gold/[0.05] hover:bg-brand-gold hover:text-white transition-all duration-200"
         >
-          <MessageCircle size={14} />
+          <MessageCircle size={13} />
           Get Quote
         </a>
       </div>
