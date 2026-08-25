@@ -69,7 +69,7 @@ export const products = [
     slug: "visiting-cards",
     categoryId: "cat-1",
     shortDescription: "Professional visiting cards to make a lasting first impression.",
-    image: "https://images.unsplash.com/photo-1622555064177-d12cc627e87a?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1707299651093-1c1448a7d993?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "3.5 x 2 inches",
       paper: "300 / 350 GSM Card Stock",
@@ -85,7 +85,7 @@ export const products = [
     slug: "letterheads",
     categoryId: "cat-1",
     shortDescription: "Branded letterheads for official correspondence and formal communication.",
-    image: "https://images.unsplash.com/photo-1521791055366-0d553872125f?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1542120926-32f3559e9473?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "A4 (210 x 297 mm)",
       paper: "100 / 120 GSM Bond Paper",
@@ -101,7 +101,7 @@ export const products = [
     slug: "envelopes",
     categoryId: "cat-1",
     shortDescription: "Custom printed envelopes for a professional touch on all your mail.",
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1567794636765-5e4869f627e1?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Standard DL (220 x 110 mm)",
       paper: "90 / 100 GSM",
@@ -149,7 +149,7 @@ export const products = [
     slug: "notepads",
     categoryId: "cat-1",
     shortDescription: "Custom-branded notepads for everyday office use and promotional giveaways.",
-    image: "https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1676287571982-611b20c9752f?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "A5 / A6",
       paper: "100 GSM Writing Paper, 300 GSM Cover",
@@ -165,7 +165,7 @@ export const products = [
     slug: "certificates",
     categoryId: "cat-1",
     shortDescription: "Premium certificates with foil accents for formal recognition.",
-    image: "https://images.unsplash.com/photo-1578269174936-2709b6aeb913?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1568124925946-0054739daaba?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "A4 (210 x 297 mm)",
       paper: "150 GSM Art Card",
@@ -197,7 +197,7 @@ export const products = [
     slug: "company-profiles",
     categoryId: "cat-1",
     shortDescription: "Multi-page company profile booklets to showcase your business.",
-    image: "https://images.unsplash.com/photo-1562577309-9e66f0c65ce5?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "A4 (210 x 297 mm)",
       paper: "Multi-page, 130/170 GSM Art Paper",
@@ -213,7 +213,7 @@ export const products = [
     slug: "brochures-stationery",
     categoryId: "cat-1",
     shortDescription: "Tri-fold and bi-fold brochures for detailed product and service information.",
-    image: "https://images.unsplash.com/photo-1502767089025-6572583495f9?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1695634621121-691d54259d37?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "A4 (folded to DL or custom)",
       paper: "130 / 170 GSM Art Paper",
@@ -249,7 +249,7 @@ export const products = [
     slug: "flyers",
     categoryId: "cat-2",
     shortDescription: "Vibrant flyers for effective marketing and promotional campaigns.",
-    image: "https://images.unsplash.com/photo-1741636174246-d951534d9830?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1622223373286-4db475b3b9a7?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "A4 / A5",
       paper: "130 / 170 GSM Art Paper",
@@ -265,7 +265,7 @@ export const products = [
     slug: "pamphlets",
     categoryId: "cat-2",
     shortDescription: "Informative pamphlets for detailed marketing and awareness campaigns.",
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1556943418-0e5712249b9d?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "A4",
       paper: "80 / 100 GSM",
@@ -297,7 +297,7 @@ export const products = [
     slug: "rack-cards",
     categoryId: "cat-2",
     shortDescription: "Compact rack cards for point-of-sale marketing and information display.",
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1704030459027-a8d4342727a1?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "4 x 9 inches",
       paper: "300 GSM Card Stock",
@@ -329,7 +329,7 @@ export const products = [
     slug: "menus",
     categoryId: "cat-2",
     shortDescription: "Professional menu printing for restaurants, cafes, and food businesses.",
-    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1776439809615-4eaac219275a?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Custom (A4, A5, or custom dimensions)",
       paper: "170 GSM Art Paper",
@@ -345,7 +345,7 @@ export const products = [
     slug: "door-hangers",
     categoryId: "cat-2",
     shortDescription: "Custom door hangers for targeted neighborhood marketing and promotions.",
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1723398840367-4d1993648a6a?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "4.25 x 11 inches",
       paper: "300 GSM Card Stock",
@@ -461,7 +461,7 @@ export const products = [
     slug: "event-branding",
     categoryId: "cat-3",
     shortDescription: "Complete event branding solutions from entry to stage.",
-    image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1768898794991-c65bb94fd4d8?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Custom (full setup as per venue)",
       paper: "Mixed Media (Vinyl, Fabric, Flex)",
@@ -529,7 +529,7 @@ export const products = [
     slug: "food-boxes",
     categoryId: "cat-4",
     shortDescription: "Custom food-grade packaging boxes for restaurants and food businesses.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1555507036-ab1f4159b806?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Custom (various food-grade sizes)",
       paper: "Food-Grade Cardboard / Corrugated",
@@ -545,7 +545,7 @@ export const products = [
     slug: "cake-boxes",
     categoryId: "cat-4",
     shortDescription: "Premium cake boxes for bakeries and confectionery businesses.",
-    image: "https://images.unsplash.com/photo-1555507036-ab1f4159b806?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1562577309-9e66f0c65ce5?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Custom (various cake sizes)",
       paper: "350 GSM Food-Grade Cardboard",
@@ -593,7 +593,7 @@ export const products = [
     slug: "custom-packaging",
     categoryId: "cat-4",
     shortDescription: "Fully customized packaging solutions tailored to your product and brand.",
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Fully Custom",
       paper: "Various materials (Cardboard, Corrugated, Rigid)",
@@ -609,7 +609,7 @@ export const products = [
     slug: "tissue-boxes",
     categoryId: "cat-4",
     shortDescription: "Custom printed tissue boxes for offices, hotels, and homes.",
-    image: "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1563225409-127c18758bd5?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Standard tissue box dimensions",
       paper: "250-300 GSM Cardboard",
@@ -645,7 +645,7 @@ export const products = [
     slug: "die-cut",
     categoryId: "cat-5",
     shortDescription: "Precision die-cut stickers in custom shapes and designs.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.pexels.com/photos/16605271/pexels-photo-16605271.jpeg?w=600&h=400&fit=crop",
     specifications: {
       size: "Custom (any shape)",
       paper: "Vinyl / Paper, Self-Adhesive",
@@ -661,7 +661,7 @@ export const products = [
     slug: "round-stickers",
     categoryId: "cat-5",
     shortDescription: "Classic round stickers for seals, labels, and branding.",
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.pexels.com/photos/1550336/pexels-photo-1550336.jpeg?w=600&h=400&fit=crop",
     specifications: {
       size: "Various (1 inch to 4 inch diameter)",
       paper: "Vinyl / Paper, Self-Adhesive",
@@ -677,7 +677,7 @@ export const products = [
     slug: "transparent-stickers",
     categoryId: "cat-5",
     shortDescription: "Clear transparent stickers for a sleek, modern look.",
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1566125882500-87e10f726cdc?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Custom shapes and sizes",
       paper: "Clear Vinyl, Self-Adhesive",
@@ -693,7 +693,7 @@ export const products = [
     slug: "vinyl-stickers",
     categoryId: "cat-5",
     shortDescription: "Durable weatherproof vinyl stickers for indoor and outdoor use.",
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1646568779353-b9d2b903b3e1?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Custom shapes and sizes",
       paper: "Premium Vinyl, Self-Adhesive",
@@ -777,7 +777,7 @@ export const products = [
     slug: "keychains",
     categoryId: "cat-6",
     shortDescription: "Custom keychains in metal and acrylic for brand promotion.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.pexels.com/photos/11294497/pexels-photo-11294497.jpeg?w=600&h=400&fit=crop",
     specifications: {
       size: "Standard (2-3 inches)",
       paper: "Metal / Acrylic / PVC",
@@ -809,7 +809,7 @@ export const products = [
     slug: "lanyards",
     categoryId: "cat-6",
     shortDescription: "Custom lanyards with full-color printing for ID badges and events.",
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1559057287-ce0f595679a8?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Standard (3/8 inch, 3/4 inch, 1 inch width)",
       paper: "Nylon / Polyester Webbing",
@@ -841,7 +841,7 @@ export const products = [
     slug: "tote-bags",
     categoryId: "cat-6",
     shortDescription: "Custom tote bags in cotton and jute for eco-friendly branding.",
-    image: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.pexels.com/photos/36856348/pexels-photo-36856348.jpeg?w=600&h=400&fit=crop",
     specifications: {
       size: "Standard (15 x 16 inches)",
       paper: "Cotton / Jute Fabric",
@@ -861,7 +861,7 @@ export const products = [
     slug: "certificates-event",
     categoryId: "cat-7",
     shortDescription: "Formal certificates with foil accents for events and recognitions.",
-    image: "https://images.unsplash.com/photo-1578269174936-2709b6aeb913?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1568137224279-f19f0f825447?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "A4 (210 x 297 mm)",
       paper: "150 GSM Art Card",
@@ -877,7 +877,7 @@ export const products = [
     slug: "awards",
     categoryId: "cat-7",
     shortDescription: "Custom crystal and wood awards with personalized engraving.",
-    image: "https://images.unsplash.com/photo-1578269174936-2709b6aeb913?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1653682902362-308526d14ef5?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Various (standard trophy sizes)",
       paper: "Crystal / Wood / Glass",
@@ -893,7 +893,7 @@ export const products = [
     slug: "invitations",
     categoryId: "cat-7",
     shortDescription: "Premium invitation cards for corporate events and formal gatherings.",
-    image: "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1559588501-59a118c47e59?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Custom (5x7, 4x6, or custom)",
       paper: "Premium Card Stock (250-350 GSM)",
@@ -909,7 +909,7 @@ export const products = [
     slug: "event-backdrops",
     categoryId: "cat-7",
     shortDescription: "Custom event backdrops for stage branding and photo walls.",
-    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1716666179411-55eb28b2aa19?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Custom (8x8 ft, 10x10 ft, or as required)",
       paper: "Vinyl / Fabric Material",
@@ -925,7 +925,7 @@ export const products = [
     slug: "name-tags",
     categoryId: "cat-7",
     shortDescription: "Custom name tags for conferences, offices, and events.",
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.pexels.com/photos/9594090/pexels-photo-9594090.jpeg?w=600&h=400&fit=crop",
     specifications: {
       size: "Standard (3.5 x 2 inches)",
       paper: "PVC / Acrylic",
@@ -941,7 +941,7 @@ export const products = [
     slug: "badges",
     categoryId: "cat-7",
     shortDescription: "Custom badges in metal and acrylic for events and identification.",
-    image: "https://images.unsplash.com/photo-1578269174936-2709b6aeb913?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1568057373189-8bf0cf6179e6?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Custom (various shapes and sizes)",
       paper: "Metal / Acrylic",
@@ -957,7 +957,7 @@ export const products = [
     slug: "ribbons",
     categoryId: "cat-7",
     shortDescription: "Custom printed ribbons for events, awards, and ceremonial use.",
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1567794947078-3b0d66d77224?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Custom (various widths: 10mm-50mm)",
       paper: "Satin / Polyester Ribbon",
@@ -1025,7 +1025,7 @@ export const products = [
     slug: "menu-design",
     categoryId: "cat-8",
     shortDescription: "Custom menu design for restaurants, cafes, and food businesses.",
-    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1768162125903-e142cba00c9f?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Custom (A4, A5, or as required)",
       paper: "Digital Design",
@@ -1041,7 +1041,7 @@ export const products = [
     slug: "packaging-design",
     categoryId: "cat-8",
     shortDescription: "Custom packaging design for all types of product packaging.",
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1648994605536-10633d3e0886?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Custom (as per packaging dimensions)",
       paper: "Digital Design",
@@ -1057,7 +1057,7 @@ export const products = [
     slug: "ad-prints",
     categoryId: "cat-8",
     shortDescription: "Professional ad designs for print and digital marketing campaigns.",
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&h=400&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1634562876572-5abe57afcceb?w=600&h=400&fit=crop&auto=format",
     specifications: {
       size: "Various (print and digital dimensions)",
       paper: "Digital Design",
