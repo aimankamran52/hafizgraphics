@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { stats } from "../data/siteInfo";
-import { ArrowRight, Shield, Palette, Truck, Users, Star, Quote } from "lucide-react";
+import { stats, PHONE_NUMBER, WHATSAPP_NUMBER, WHATSAPP_MESSAGE, EMAIL, ADDRESS } from "../data/siteInfo";
+import { ArrowRight, Shield, Palette, Truck, Users, Star, Quote, Phone, MessageCircle, Mail, MapPin } from "lucide-react";
 
 const features = [
   {
@@ -88,6 +88,50 @@ export default function Home() {
                   <p className="text-xs text-gray-500 mt-1 uppercase tracking-wider">{stat.label}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Strip */}
+      <section className="bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <a href={`tel:${PHONE_NUMBER.replace(/\s/g, "")}`} className="flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-lg bg-brand-gold/10 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-gold/20 transition-colors">
+                <Phone size={18} className="text-brand-gold" />
+              </div>
+              <div>
+                <p className="text-xs text-gray-400">Call Us</p>
+                <p className="text-sm font-semibold text-gray-900 group-hover:text-brand-gold transition-colors">{PHONE_NUMBER}</p>
+              </div>
+            </a>
+            <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-lg bg-brand-gold/10 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-gold/20 transition-colors">
+                <MessageCircle size={18} className="text-brand-gold" />
+              </div>
+              <div>
+                <p className="text-xs text-gray-400">WhatsApp</p>
+                <p className="text-sm font-semibold text-gray-900 group-hover:text-brand-gold transition-colors">{PHONE_NUMBER}</p>
+              </div>
+            </a>
+            <a href={`mailto:${EMAIL}`} className="flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-lg bg-brand-gold/10 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-gold/20 transition-colors">
+                <Mail size={18} className="text-brand-gold" />
+              </div>
+              <div>
+                <p className="text-xs text-gray-400">Email</p>
+                <p className="text-sm font-semibold text-gray-900 group-hover:text-brand-gold transition-colors">{EMAIL}</p>
+              </div>
+            </a>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-brand-gold/10 flex items-center justify-center flex-shrink-0">
+                <MapPin size={18} className="text-brand-gold" />
+              </div>
+              <div>
+                <p className="text-xs text-gray-400">Location</p>
+                <p className="text-sm font-semibold text-gray-900">{ADDRESS}</p>
+              </div>
             </div>
           </div>
         </div>
