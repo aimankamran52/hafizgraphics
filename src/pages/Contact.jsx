@@ -35,7 +35,7 @@ export default function Contact() {
     <main>
       {/* Hero */}
       <section className="bg-brand-dark py-12 md:py-20">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 text-center">
           <h1 className="text-3xl md:text-4xl font-bold text-white font-display mb-2">Contact Us</h1>
           <p className="text-gray-400 text-sm mb-4">Let's Work Together</p>
           <nav className="flex items-center justify-center gap-1.5 text-xs text-gray-500">
@@ -48,7 +48,7 @@ export default function Contact() {
 
       {/* Content */}
       <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-3xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
           <div className="text-center mb-12">
             <p className="text-gray-500 text-sm leading-relaxed">
               Contact us for a quotation or to discuss your project requirements.

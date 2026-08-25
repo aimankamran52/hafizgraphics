@@ -58,7 +58,7 @@ export default function Products() {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="bg-brand-dark py-8 md:py-14">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white mb-2">
             Our Products
           </h1>
@@ -81,7 +81,7 @@ export default function Products() {
 
       {/* Tabs */}
       <section className="bg-white border-b border-gray-100 sticky top-16 z-40">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
           <div className="flex items-center gap-1 overflow-x-auto py-3 scrollbar-hide">
             <button
               onClick={() => handleCategoryChange('all')}
@@ -110,7 +110,7 @@ export default function Products() {
         </div>
       </section>
 
-      <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 py-8">
         {/* Search */}
         <div className="max-w-sm mb-6 md:mb-8 ml-auto">
           <div className="relative">

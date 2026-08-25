@@ -72,7 +72,7 @@ export default function Reviews() {
     <main>
       {/* Hero */}
       <section className="bg-brand-dark py-12 md:py-20">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 text-center">
           <nav className="mb-6">
             <ol className="flex items-center justify-center gap-1.5 text-xs text-gray-500">
               <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
@@ -89,7 +89,7 @@ export default function Reviews() {
 
       {/* Reviews */}
       <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {reviews.map((review, index) => (
               <div key={index} className="bg-brand-light rounded-xl p-5 border border-gray-100">
@@ -114,7 +114,7 @@ export default function Reviews() {
 
       {/* CTA */}
       <section className="py-14 bg-brand-light">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 text-center">
           <MessageCircle className="w-8 h-8 text-brand-gold mx-auto mb-4" />
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 font-display mb-2">
             Share Your Experience

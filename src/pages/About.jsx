@@ -18,7 +18,7 @@ export default function About() {
     <main>
       {/* Hero */}
       <section className="bg-brand-dark py-12 md:py-20">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 text-center">
           <h1 className="text-3xl md:text-4xl font-bold text-white font-display mb-2">About Us</h1>
           <p className="text-gray-400 text-sm mb-4">Creative Design & Printing Company</p>
           <nav className="flex items-center justify-center gap-1.5 text-xs text-gray-500">
@@ -31,8 +31,8 @@ export default function About() {
 
       {/* Intro */}
       <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.2em] mb-3">Who We Are</p>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-display mb-5">
@@ -65,7 +65,7 @@ export default function About() {
 
       {/* Mission & Vision */}
       <section className="py-16 md:py-24 bg-brand-light">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
           <div className="text-center mb-12">
             <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.2em] mb-3">Our Purpose</p>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-display">Mission & Vision</h2>
@@ -97,8 +97,8 @@ export default function About() {
 
       {/* Founder */}
       <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center max-w-4xl mx-auto">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center max-w-5xl mx-auto">
             <div className="bg-gradient-to-br from-brand-dark to-brand-navy rounded-2xl p-10 flex items-center justify-center min-h-[280px]">
               <div className="text-center">
                 <div className="w-14 h-14 rounded-full bg-brand-gold/15 flex items-center justify-center mx-auto mb-3">
@@ -137,7 +137,7 @@ export default function About() {
 
       {/* Values */}
       <section className="py-16 md:py-24 bg-brand-light">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
           <div className="text-center mb-12">
             <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.2em] mb-3">What Drives Us</p>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-display">Our Values</h2>

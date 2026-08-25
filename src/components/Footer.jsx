@@ -40,7 +40,7 @@ const quickLinks = [
 export default function Footer() {
   return (
     <footer className="bg-brand-dark">
-      <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-14">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 py-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="sm:col-span-2 lg:col-span-1">
             <Link to="/" className="inline-block">
@@ -139,7 +139,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/5">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-5 text-center text-xs text-gray-500">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 py-5 text-center text-xs text-gray-500">
           &copy; {new Date().getFullYear()} Hafiz Graphics. All rights reserved.
         </div>
       </div>

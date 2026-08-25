@@ -45,15 +45,15 @@ export default function Header() {
             : "bg-white"
         }`}
       >
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
+          <div className="flex items-center justify-between h-16 lg:h-17">
             <Link to="/" className="flex items-center gap-2">
               <span className="text-lg font-bold gradient-text font-display tracking-wide">
                 HAFIZ GRAPHICS
               </span>
             </Link>
 
-            <nav className="hidden lg:flex items-center gap-1">
+            <nav className="hidden lg:flex items-center gap-1.5 xl:gap-2">
               {navLinks.map((link) => (
                 <NavLink
                   key={link.to}

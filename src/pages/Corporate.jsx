@@ -37,7 +37,7 @@ export default function Corporate() {
     <main>
       {/* Hero */}
       <section className="bg-brand-dark py-12 md:py-20">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 text-center">
           <h1 className="text-3xl md:text-4xl font-bold text-white font-display mb-2">Corporate Solutions</h1>
           <p className="text-gray-400 text-sm mb-4">Your Reliable Printing Partner</p>
           <nav className="flex items-center justify-center gap-1.5 text-xs text-gray-500">
@@ -50,7 +50,7 @@ export default function Corporate() {
 
       {/* Intro */}
       <section className="py-14 md:py-20 bg-white">
-        <div className="max-w-3xl mx-auto px-5 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 text-center">
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 font-display mb-3">
             Reliable printing partner for your company
           </h2>
@@ -62,7 +62,7 @@ export default function Corporate() {
 
       {/* Services */}
       <section className="py-16 md:py-24 bg-brand-light">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
           <div className="text-center mb-12">
             <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.2em] mb-3">What We Offer</p>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-display">Corporate Services</h2>
@@ -87,7 +87,7 @@ export default function Corporate() {
 
       {/* Why Choose Us */}
       <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center max-w-4xl mx-auto">
             <div>
               <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.2em] mb-3">Our Advantage</p>
@@ -117,7 +117,7 @@ export default function Corporate() {
 
       {/* Process */}
       <section className="py-16 md:py-24 bg-brand-light">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
           <div className="text-center mb-12">
             <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.2em] mb-3">Our Process</p>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-display">How It Works</h2>
@@ -139,7 +139,7 @@ export default function Corporate() {
 
       {/* CTA */}
       <section className="py-14 bg-brand-dark">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white font-display mb-3">
             Ready to streamline your printing?
           </h2>

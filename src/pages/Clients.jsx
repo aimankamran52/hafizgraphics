@@ -49,7 +49,7 @@ export default function Clients() {
     <main>
       {/* Hero */}
       <section className="bg-brand-dark py-12 md:py-20">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 text-center">
           <h1 className="text-3xl md:text-4xl font-bold text-white font-display mb-2">Our Clients</h1>
           <p className="text-gray-400 text-sm mb-4">
             Trusted by businesses and organizations across Pakistan
@@ -64,7 +64,7 @@ export default function Clients() {
 
       {/* Stats */}
       <section className="py-12 bg-white">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
             {stats.map((stat, i) => (
               <div key={i} className="bg-brand-light p-5 rounded-xl text-center border border-gray-100">
@@ -78,7 +78,7 @@ export default function Clients() {
 
       {/* Clients */}
       <section className="py-16 md:py-24 bg-brand-light">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
           <div className="text-center mb-12">
             <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.2em] mb-3">Portfolio</p>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-display">Trusted By Leading Organizations</h2>
@@ -100,7 +100,7 @@ export default function Clients() {
 
       {/* Industries */}
       <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
           <div className="text-center mb-12">
             <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.2em] mb-3">Industries</p>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-display">Industries We Serve</h2>
@@ -124,7 +124,7 @@ export default function Clients() {
 
       {/* CTA */}
       <section className="py-14 bg-brand-dark">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white font-display mb-3">
             Want to join our clients?
           </h2>

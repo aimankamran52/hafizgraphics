@@ -18,7 +18,7 @@ export default function Catalogue() {
     <main>
       {/* Hero */}
       <section className="bg-brand-dark py-12 md:py-20">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
           <h1 className="text-3xl md:text-4xl font-bold text-white font-display mb-2">Product Catalogue</h1>
           <p className="text-gray-400 text-sm mb-5">Browse our complete range of printing and design solutions</p>
           <nav className="flex items-center gap-1.5 text-xs text-gray-500">
@@ -31,7 +31,7 @@ export default function Catalogue() {
 
       {/* Categories */}
       <section className="py-16 md:py-24 bg-brand-light">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
           <div className="text-center mb-12">
             <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.2em] mb-3">Browse Categories</p>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-display">Our Products</h2>

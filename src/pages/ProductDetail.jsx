@@ -60,7 +60,7 @@ export default function ProductDetail() {
   return (
     <div className="min-h-screen">
       {/* Top bar */}
-      <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 pt-5">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 pt-5">
         <button
           onClick={() => navigate(-1)}
           className="inline-flex items-center gap-1.5 text-sm text-gray-400 hover:text-gray-900 transition-colors"
@@ -71,7 +71,7 @@ export default function ProductDetail() {
       </div>
 
       {/* Breadcrumb */}
-      <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-3">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 py-3">
         <nav className="flex items-center gap-1.5 text-xs text-gray-400 flex-wrap">
           <Link to="/" className="hover:text-gray-900 transition-colors">Home</Link>
           <ChevronRight className="w-3 h-3" />
@@ -90,8 +90,8 @@ export default function ProductDetail() {
       </div>
 
       {/* Product info */}
-      <section className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+      <section className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 py-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-start">
           {/* Product image */}
           {product.image && (
             <div className="rounded-xl overflow-hidden bg-gray-100 border border-gray-100">
@@ -148,7 +148,7 @@ export default function ProductDetail() {
 
       {/* Specifications */}
       {product.specifications && Object.keys(product.specifications).length > 0 && (
-        <section className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-6">
+        <section className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 py-6">
           <div className="bg-brand-light rounded-xl p-5 md:p-6">
             <h2 className="text-base font-bold text-gray-900 font-display mb-4">Specifications</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -174,7 +174,7 @@ export default function ProductDetail() {
 
       {/* Related */}
       {relatedProducts.length > 0 && (
-        <section className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-10">
+        <section className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 py-10">
           <h2 className="text-lg font-display font-bold text-gray-900 mb-5">Related Products</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {relatedProducts.map(rp => (
