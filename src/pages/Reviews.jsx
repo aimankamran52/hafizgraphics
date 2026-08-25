@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Star, MessageCircle, ChevronRight } from 'lucide-react';
+import { Star, ChevronRight } from 'lucide-react';
 
 const reviews = [
   {
@@ -65,6 +65,69 @@ const reviews = [
     rating: 5,
     category: "Packaging",
   },
+  {
+    name: "Ahmed Raza",
+    company: "Raza & Associates",
+    text: "Letterheads aur envelopes ka design aur print bohat clean aya. Client meetings mein professionally impact parta hai. Thank you Hafiz Graphics.",
+    rating: 5,
+    category: "Stationery",
+  },
+  {
+    name: "Fatima Noor",
+    company: "Bloom Academy",
+    text: "Annual function ke liye invitations aur certificates sab ek saath banwaye. Ek hi jagah se sab mil gaya, time bacha aur quality bhi zabardast thi.",
+    rating: 5,
+    category: "Events",
+  },
+  {
+    name: "Bilal Ahmed",
+    company: "Tech Hub Store",
+    text: "Product stickers aur packaging labels order kiye the. Finish bohat professional tha aur waterproof bhi hai. Monthly orders ab in se hi hotay hain.",
+    rating: 5,
+    category: "Labels",
+  },
+  {
+    name: "Sana Malik",
+    company: "Sana's Boutique",
+    text: "Shopping bags banwaye the boutique ke liye. Logo aur colors exactly waise aaye jaise design mein tha. Customers bhi pasand karte hain.",
+    rating: 5,
+    category: "Packaging",
+  },
+  {
+    name: "Usman Ghani",
+    company: "Ghani Traders",
+    text: "Pens, mugs aur t-shirts sab custom banwaye the company ke liye. Bulk mein bhi quality maintain thi. Bohat satisfied hoon.",
+    rating: 5,
+    category: "Promotional",
+  },
+  {
+    name: "Zainab Iqbal",
+    company: "The Food Factory",
+    text: "Menu cards aur takeaway packaging dono in se banwayi. Design modern aur clean tha. Ab regularly kaam karwate hain.",
+    rating: 5,
+    category: "Printing",
+  },
+  {
+    name: "Kamran Ali",
+    company: "Pak Vision Electronics",
+    text: "Retail shop ke liye standees aur price tags banwaye. Display kaafi attractive ho gaya. Sales mein bhi farq aya.",
+    rating: 4,
+    category: "Large Format",
+  },
+  {
+    name: "Nadia Parveen",
+    company: "Green Valley School",
+    text: "School ke liye ID cards, report cards aur banners sab ek saath banwaye. Quality consistent thi aur delivery time bhi par tha.",
+    rating: 5,
+    category: "Corporate",
+  },
+  {
+    name: "Hassan Javed",
+    company: "Elite Events Co.",
+    text: "Wedding cards aur event stationery banwayi thi. Design aur print dono top class thay. Family members ne bhi bohat tareef ki.",
+    rating: 5,
+    category: "Events",
+  },
 ];
 
 export default function Reviews() {
@@ -109,28 +172,6 @@ export default function Reviews() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="section-padding bg-brand-light">
-        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 text-center">
-          <MessageCircle className="w-8 h-8 text-brand-gold mx-auto mb-4" />
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 font-display mb-2">
-            Share Your Experience
-          </h2>
-          <p className="text-gray-500 text-[14px] max-w-md mx-auto mb-6">
-            We value your feedback. Help us improve and serve you better.
-          </p>
-          <a
-            href="https://wa.me/923318111539?text=I%20would%20like%20to%20share%20my%20feedback%20about%20Hafiz%20Graphics"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-gold-dark text-white font-semibold text-[13px] px-6 py-3 rounded-full transition-colors shadow-lg shadow-brand-gold/15"
-          >
-            <MessageCircle className="w-4 h-4" />
-            Share Feedback
-          </a>
         </div>
       </section>
     </main>
