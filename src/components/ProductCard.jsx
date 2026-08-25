@@ -9,7 +9,7 @@ export default function ProductCard({ product }) {
   return (
     <div className="group bg-white rounded-xl border border-gray-100 overflow-hidden hover:border-gray-200 hover:shadow-sm transition-all duration-200 flex flex-col">
       {product.image && (
-        <div className="relative h-44 overflow-hidden bg-gray-100">
+        <div className="relative h-48 overflow-hidden bg-gray-100">
           <img
             src={product.image}
             alt={product.name}
@@ -18,13 +18,13 @@ export default function ProductCard({ product }) {
           />
         </div>
       )}
-      <div className="p-5 flex flex-col flex-1">
-        <h3 className="text-[15px] font-semibold text-gray-900 mb-1.5">
+      <div className="p-4 flex flex-col flex-1">
+        <h3 className="text-sm font-semibold text-gray-900 mb-1.5">
           {product.name}
         </h3>
 
         {product.shortDescription && (
-          <p className="text-sm text-gray-400 mb-4 line-clamp-2 flex-1 leading-relaxed">
+          <p className="text-sm text-gray-400 mb-4 line-clamp-1 flex-1 leading-relaxed">
             {product.shortDescription}
           </p>
         )}

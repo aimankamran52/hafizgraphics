@@ -57,15 +57,15 @@ export default function Products() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-brand-dark py-12 md:py-20">
+      <section className="bg-brand-dark py-8 md:py-14">
         <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-4xl font-display font-bold text-white mb-2">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white mb-2">
             Our Products
           </h1>
-          <p className="text-gray-400 text-sm mb-5">
+          <p className="text-gray-400 text-sm mb-4">
             Printing, designing, branding and promotional solutions
           </p>
-          <nav className="flex items-center gap-1.5 text-xs text-gray-500">
+          <nav className="flex items-center gap-1.5 text-xs text-gray-500 flex-wrap">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <span className="text-gray-300">Products</span>
@@ -112,7 +112,7 @@ export default function Products() {
 
       <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-8">
         {/* Search */}
-        <div className="max-w-sm mb-8">
+        <div className="max-w-sm mb-6 md:mb-8">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
             <input
@@ -136,7 +136,7 @@ export default function Products() {
         {/* Category overview on 'all' */}
         {activeCategory === 'all' && !searchQuery && (
           <div className="mb-10">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
               {categories.map(category => {
                 const count = getProductsByCategory(category.slug).length
                 return (
@@ -161,7 +161,7 @@ export default function Products() {
 
         {/* Products */}
         <div>
-          <div className="flex items-center justify-between mb-5">
+          <div className="flex flex-wrap items-center justify-between gap-2 mb-5">
             <h2 className="text-lg font-display font-bold text-gray-900">
               {activeCategory === 'all' ? 'All Products' : activeCategoryData?.name || 'Products'}
             </h2>
@@ -169,7 +169,7 @@ export default function Products() {
           </div>
 
           {filteredProducts.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5">
               {filteredProducts.map(product => (
                 <ProductCard key={product.slug} product={product} />
               ))}

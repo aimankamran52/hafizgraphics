@@ -39,7 +39,7 @@ export default function About() {
                 About Hafiz Graphics
               </h2>
               <p className="text-gray-500 leading-relaxed text-sm mb-8">
-                Hafiz Graphics is a creative design and printing company helping businesses across Pakistan with high-quality design, printing and branding solutions.
+                Hafiz Graphics is a creative design and printing company providing high-quality design, printing and branding solutions across Pakistan.
               </p>
               <div className="flex flex-wrap gap-2">
                 {clientTypes.map((type) => (
@@ -78,7 +78,7 @@ export default function About() {
               </div>
               <h3 className="text-base font-bold text-gray-900 mb-2">Our Mission</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
-                To provide high-quality, creative and reliable graphic designing, printing and branding solutions that help businesses communicate their identity professionally.
+                To provide high-quality, creative and reliable graphic designing, printing and branding solutions.
               </p>
             </div>
 
@@ -88,7 +88,7 @@ export default function About() {
               </div>
               <h3 className="text-base font-bold text-gray-900 mb-2">Our Vision</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
-                To become a trusted printing and creative partner for businesses across Pakistan by combining quality, creativity and long-term customer relationships.
+                To become a trusted printing and creative partner for businesses across Pakistan.
               </p>
             </div>
           </div>
@@ -114,7 +114,7 @@ export default function About() {
               <h2 className="text-xl md:text-2xl font-bold text-gray-900 font-display mb-1">Hafiz Mobeen Ahmed</h2>
               <p className="text-gray-400 text-sm mb-5">Founder & CEO — Hafiz Graphics</p>
               <p className="text-gray-500 text-sm leading-relaxed mb-6">
-                Focused on quality, customer satisfaction and building long-term business relationships.
+                Focused on quality, customer satisfaction and building long-term relationships.
               </p>
               <div className="grid grid-cols-3 gap-4 pt-5 border-t border-gray-100">
                 <div>

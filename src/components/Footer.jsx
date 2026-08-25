@@ -49,7 +49,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="mt-3 text-gray-400 text-sm leading-relaxed max-w-xs">
-              Professional graphic designing, printing and branding solutions across Pakistan.
+              Professional graphic designing, printing and branding across Pakistan.
             </p>
           </div>
 

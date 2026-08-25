@@ -6,38 +6,38 @@ const features = [
   {
     icon: Shield,
     title: "Professional Quality",
-    description: "High-quality design and printing that represents your brand professionally.",
+    description: "High-quality design and printing for your brand.",
   },
   {
     icon: Palette,
     title: "Complete Branding",
-    description: "From design to print — all your branding needs in one place.",
+    description: "From design to print — all branding needs in one place.",
   },
   {
     icon: Truck,
     title: "Reliable Delivery",
-    description: "Timely delivery and professional communication every time.",
+    description: "Timely delivery and professional communication.",
   },
   {
     icon: Users,
     title: "Corporate Solutions",
-    description: "Specialized printing for businesses, schools and organizations.",
+    description: "Specialized printing for businesses and organizations.",
   },
 ];
 
 const testimonials = [
   {
-    text: "Hum ne visiting cards banwaye aur bohat achi quality mili. Ab sari printing yahan se karwata hoon. Highly recommended!",
+    text: "Visiting cards banwaye, bohat achi quality mili. Ab sari printing yahan se karwata hoon. Recommended!",
     name: "Asif Mehmood",
     role: "Owner, Al-Rehman Traders",
   },
   {
-    text: "We needed 2000 file folders urgently. They finished in 3 days with excellent quality. Really professional team.",
+    text: "Needed 2000 file folders urgently. Finished in 3 days with excellent quality. Professional team.",
     name: "Dr. Ayesha Siddiqui",
     role: "COO, City Medical Centre",
   },
   {
-    text: "For 18 months all our office stationery has been handled by them. Consistent quality and never missed a deadline.",
+    text: "Office stationery handled for 18 months. Consistent quality, never missed a deadline.",
     name: "Faisal Naveed",
     role: "Director Admin, Pak Systems",
   },
