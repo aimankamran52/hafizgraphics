@@ -72,8 +72,28 @@ export default function Products() {
       <section className="bg-white border-b border-gray-100 sticky top-[60px] lg:top-[68px] z-40">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 xl:px-12">
           <div className="flex items-center gap-3 py-3">
+            {/* Search — left side */}
+            <div className="flex-shrink-0 relative hidden sm:block">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
+              <input
+                type="text"
+                placeholder="Search..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-52 pl-9 pr-8 py-2 border border-gray-200/80 rounded-lg text-[13px] focus:ring-2 focus:ring-brand-gold/20 focus:border-brand-gold outline-none transition-all bg-gray-50/50 focus:bg-white"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-300 hover:text-gray-500"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
+
             {/* Category Tabs */}
-            <div className="flex items-center gap-1 overflow-x-auto scrollbar-hide flex-1 min-w-0">
+            <div className="flex items-center gap-1 overflow-x-auto scrollbar-hide flex-1 min-w-0 justify-end">
               <button
                 onClick={() => handleCategoryChange('all')}
                 className={`flex-shrink-0 px-4 py-2 rounded-full text-[12px] font-semibold transition-all duration-200 ${
@@ -97,26 +117,6 @@ export default function Products() {
                   {category.name}
                 </button>
               ))}
-            </div>
-
-            {/* Search — inside the bar */}
-            <div className="flex-shrink-0 relative hidden sm:block">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
-              <input
-                type="text"
-                placeholder="Search..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-48 pl-9 pr-8 py-2 border border-gray-200/80 rounded-lg text-[13px] focus:ring-2 focus:ring-brand-gold/20 focus:border-brand-gold outline-none transition-all bg-gray-50/50 focus:bg-white"
-              />
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery('')}
-                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-300 hover:text-gray-500"
-                >
-                  <X className="w-3.5 h-3.5" />
-                </button>
-              )}
             </div>
           </div>
         </div>
