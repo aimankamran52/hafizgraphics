@@ -1,4 +1,4 @@
-import { MessageCircle, ArrowUpRight } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from "../data/siteInfo";
 
 export default function ProductCard({ product }) {
@@ -7,26 +7,38 @@ export default function ProductCard({ product }) {
   )}`;
 
   return (
-    <div className="group bg-white rounded-xl border border-gray-100 p-5 hover:border-gray-200 hover:shadow-sm transition-all duration-200 flex flex-col">
-      <h3 className="text-[15px] font-semibold text-gray-900 mb-1.5">
-        {product.name}
-      </h3>
-
-      {product.shortDescription && (
-        <p className="text-sm text-gray-400 mb-4 line-clamp-2 flex-1 leading-relaxed">
-          {product.shortDescription}
-        </p>
+    <div className="group bg-white rounded-xl border border-gray-100 overflow-hidden hover:border-gray-200 hover:shadow-sm transition-all duration-200 flex flex-col">
+      {product.image && (
+        <div className="relative h-44 overflow-hidden bg-gray-100">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy"
+          />
+        </div>
       )}
+      <div className="p-5 flex flex-col flex-1">
+        <h3 className="text-[15px] font-semibold text-gray-900 mb-1.5">
+          {product.name}
+        </h3>
 
-      <a
-        href={whatsappUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-auto inline-flex items-center justify-center gap-2 w-full py-2.5 border border-gray-200 rounded-lg text-sm font-medium text-gray-700 hover:border-brand-gold hover:text-brand-gold transition-colors"
-      >
-        <MessageCircle size={15} />
-        Get Quote
-      </a>
+        {product.shortDescription && (
+          <p className="text-sm text-gray-400 mb-4 line-clamp-2 flex-1 leading-relaxed">
+            {product.shortDescription}
+          </p>
+        )}
+
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-auto inline-flex items-center justify-center gap-2 w-full py-2.5 border border-gray-200 rounded-lg text-sm font-medium text-gray-700 hover:border-brand-gold hover:text-brand-gold transition-colors"
+        >
+          <MessageCircle size={15} />
+          Get Quote
+        </a>
+      </div>
     </div>
   );
 }

@@ -91,43 +91,57 @@ export default function ProductDetail() {
 
       {/* Product info */}
       <section className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-6">
-        <div className="max-w-2xl">
-          {category && (
-            <Link
-              to={`/products/category/${category.slug}`}
-              className="inline-flex items-center gap-1 text-brand-gold text-xs font-semibold uppercase tracking-wider mb-3 hover:underline"
-            >
-              {category.name}
-            </Link>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          {/* Product image */}
+          {product.image && (
+            <div className="rounded-xl overflow-hidden bg-gray-100 border border-gray-100">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-auto object-cover"
+              />
+            </div>
           )}
 
-          <h1 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-3">
-            {product.name}
-          </h1>
+          {/* Product details */}
+          <div className={product.image ? '' : 'max-w-2xl'}>
+            {category && (
+              <Link
+                to={`/products/category/${category.slug}`}
+                className="inline-flex items-center gap-1 text-brand-gold text-xs font-semibold uppercase tracking-wider mb-3 hover:underline"
+              >
+                {category.name}
+              </Link>
+            )}
 
-          {product.shortDescription && (
-            <p className="text-gray-500 text-sm leading-relaxed mb-6">
-              {product.shortDescription}
-            </p>
-          )}
+            <h1 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-3">
+              {product.name}
+            </h1>
 
-          <div className="flex flex-wrap gap-2.5">
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-gold text-white rounded-full text-sm font-semibold hover:bg-brand-gold-dark transition-colors"
-            >
-              <MessageCircle className="w-4 h-4" />
-              Get a Quote
-            </a>
-            <a
-              href={`tel:${WHATSAPP_NUMBER.replace(/\s/g, '')}`}
-              className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-300 transition-colors"
-            >
-              <Phone className="w-4 h-4" />
-              Call Us
-            </a>
+            {product.shortDescription && (
+              <p className="text-gray-500 text-sm leading-relaxed mb-6">
+                {product.shortDescription}
+              </p>
+            )}
+
+            <div className="flex flex-wrap gap-2.5">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-gold text-white rounded-full text-sm font-semibold hover:bg-brand-gold-dark transition-colors"
+              >
+                <MessageCircle className="w-4 h-4" />
+                Get a Quote
+              </a>
+              <a
+                href={`tel:${WHATSAPP_NUMBER.replace(/\s/g, '')}`}
+                className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-300 transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                Call Us
+              </a>
+            </div>
           </div>
         </div>
       </section>
